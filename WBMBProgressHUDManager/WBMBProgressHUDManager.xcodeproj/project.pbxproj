@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90FE040E641A1B8A6C7370F1 /* libPods-WBMBProgressHUDManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D660C39E3B1F98AEC03E48 /* libPods-WBMBProgressHUDManager.a */; };
+		C2569E38202493D6007D4369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2569E37202493D6007D4369 /* AppDelegate.m */; };
+		C2569E3E202493D6007D4369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2569E3C202493D6007D4369 /* Main.storyboard */; };
+		C2569E40202493D6007D4369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2569E3F202493D6007D4369 /* Assets.xcassets */; };
+		C2569E43202493D6007D4369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2569E41202493D6007D4369 /* LaunchScreen.storyboard */; };
+		C2569E46202493D6007D4369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2569E45202493D6007D4369 /* main.m */; };
+		C2569E4F2024945A007D4369 /* MBProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C2569E4E2024945A007D4369 /* MBProgressHUD+WBAddtional.m */; };
+		C2569E512024967B007D4369 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2569E502024967B007D4369 /* MBProgressHUD.bundle */; };
+		C2569E5420249785007D4369 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2569E5320249785007D4369 /* TableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		31D660C39E3B1F98AEC03E48 /* libPods-WBMBProgressHUDManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WBMBProgressHUDManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52D52C909E88EF473099758 /* Pods-WBMBProgressHUDManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBMBProgressHUDManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBMBProgressHUDManager/Pods-WBMBProgressHUDManager.release.xcconfig"; sourceTree = "<group>"; };
+		C2569E33202493D5007D4369 /* WBMBProgressHUDManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBMBProgressHUDManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2569E36202493D5007D4369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C2569E37202493D6007D4369 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2569E3D202493D6007D4369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2569E3F202493D6007D4369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2569E42202493D6007D4369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2569E44202493D6007D4369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2569E45202493D6007D4369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2569E4D2024945A007D4369 /* MBProgressHUD+WBAddtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBAddtional.h"; sourceTree = "<group>"; };
+		C2569E4E2024945A007D4369 /* MBProgressHUD+WBAddtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+WBAddtional.m"; sourceTree = "<group>"; };
+		C2569E502024967B007D4369 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		C2569E5220249785007D4369 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		C2569E5320249785007D4369 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		F635F99428E707F3B97FEA54 /* Pods-WBMBProgressHUDManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBMBProgressHUDManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBMBProgressHUDManager/Pods-WBMBProgressHUDManager.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2569E30202493D5007D4369 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90FE040E641A1B8A6C7370F1 /* libPods-WBMBProgressHUDManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60B95B8A0F4CB965670F6F9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31D660C39E3B1F98AEC03E48 /* libPods-WBMBProgressHUDManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCDCFBA05B18A4DAAB4A7881 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F635F99428E707F3B97FEA54 /* Pods-WBMBProgressHUDManager.debug.xcconfig */,
+				B52D52C909E88EF473099758 /* Pods-WBMBProgressHUDManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C2569E2A202493D5007D4369 = {
+			isa = PBXGroup;
+			children = (
+				C2569E35202493D5007D4369 /* WBMBProgressHUDManager */,
+				C2569E34202493D5007D4369 /* Products */,
+				BCDCFBA05B18A4DAAB4A7881 /* Pods */,
+				60B95B8A0F4CB965670F6F9C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2569E34202493D5007D4369 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2569E33202493D5007D4369 /* WBMBProgressHUDManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2569E35202493D5007D4369 /* WBMBProgressHUDManager */ = {
+			isa = PBXGroup;
+			children = (
+				C2569E4C20249452007D4369 /* MBProgressHUD+WBAddtional */,
+				C2569E36202493D5007D4369 /* AppDelegate.h */,
+				C2569E37202493D6007D4369 /* AppDelegate.m */,
+				C2569E5220249785007D4369 /* TableViewController.h */,
+				C2569E5320249785007D4369 /* TableViewController.m */,
+				C2569E3C202493D6007D4369 /* Main.storyboard */,
+				C2569E3F202493D6007D4369 /* Assets.xcassets */,
+				C2569E41202493D6007D4369 /* LaunchScreen.storyboard */,
+				C2569E44202493D6007D4369 /* Info.plist */,
+				C2569E45202493D6007D4369 /* main.m */,
+			);
+			path = WBMBProgressHUDManager;
+			sourceTree = "<group>";
+		};
+		C2569E4C20249452007D4369 /* MBProgressHUD+WBAddtional */ = {
+			isa = PBXGroup;
+			children = (
+				C2569E502024967B007D4369 /* MBProgressHUD.bundle */,
+				C2569E4D2024945A007D4369 /* MBProgressHUD+WBAddtional.h */,
+				C2569E4E2024945A007D4369 /* MBProgressHUD+WBAddtional.m */,
+			);
+			path = "MBProgressHUD+WBAddtional";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2569E32202493D5007D4369 /* WBMBProgressHUDManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2569E49202493D6007D4369 /* Build configuration list for PBXNativeTarget "WBMBProgressHUDManager" */;
+			buildPhases = (
+				D960C1C59B2B142C59B541A4 /* [CP] Check Pods Manifest.lock */,
+				C2569E2F202493D5007D4369 /* Sources */,
+				C2569E30202493D5007D4369 /* Frameworks */,
+				C2569E31202493D5007D4369 /* Resources */,
+				FE2B955E36531CE0FB9FE358 /* [CP] Embed Pods Frameworks */,
+				0193E2A56D2CDC2A65BF4212 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WBMBProgressHUDManager;
+			productName = WBMBProgressHUDManager;
+			productReference = C2569E33202493D5007D4369 /* WBMBProgressHUDManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2569E2B202493D5007D4369 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = WMB;
+				TargetAttributes = {
+					C2569E32202493D5007D4369 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C2569E2E202493D5007D4369 /* Build configuration list for PBXProject "WBMBProgressHUDManager" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2569E2A202493D5007D4369;
+			productRefGroup = C2569E34202493D5007D4369 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2569E32202493D5007D4369 /* WBMBProgressHUDManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2569E31202493D5007D4369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2569E43202493D6007D4369 /* LaunchScreen.storyboard in Resources */,
+				C2569E512024967B007D4369 /* MBProgressHUD.bundle in Resources */,
+				C2569E40202493D6007D4369 /* Assets.xcassets in Resources */,
+				C2569E3E202493D6007D4369 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0193E2A56D2CDC2A65BF4212 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WBMBProgressHUDManager/Pods-WBMBProgressHUDManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D960C1C59B2B142C59B541A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WBMBProgressHUDManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE2B955E36531CE0FB9FE358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WBMBProgressHUDManager/Pods-WBMBProgressHUDManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2569E2F202493D5007D4369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2569E46202493D6007D4369 /* main.m in Sources */,
+				C2569E38202493D6007D4369 /* AppDelegate.m in Sources */,
+				C2569E4F2024945A007D4369 /* MBProgressHUD+WBAddtional.m in Sources */,
+				C2569E5420249785007D4369 /* TableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C2569E3C202493D6007D4369 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2569E3D202493D6007D4369 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C2569E41202493D6007D4369 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2569E42202493D6007D4369 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2569E47202493D6007D4369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2569E48202493D6007D4369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2569E4A202493D6007D4369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F635F99428E707F3B97FEA54 /* Pods-WBMBProgressHUDManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBMBProgressHUDManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WENBO.WBMBProgressHUDManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2569E4B202493D6007D4369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B52D52C909E88EF473099758 /* Pods-WBMBProgressHUDManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBMBProgressHUDManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = WENBO.WBMBProgressHUDManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2569E2E202493D5007D4369 /* Build configuration list for PBXProject "WBMBProgressHUDManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2569E47202493D6007D4369 /* Debug */,
+				C2569E48202493D6007D4369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2569E49202493D6007D4369 /* Build configuration list for PBXNativeTarget "WBMBProgressHUDManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2569E4A202493D6007D4369 /* Debug */,
+				C2569E4B202493D6007D4369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2569E2B202493D5007D4369 /* Project object */;
+}

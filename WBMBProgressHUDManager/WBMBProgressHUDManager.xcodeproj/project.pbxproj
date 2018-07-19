@@ -16,6 +16,7 @@
 		C2569E4F2024945A007D4369 /* MBProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C2569E4E2024945A007D4369 /* MBProgressHUD+WBAddtional.m */; };
 		C2569E512024967B007D4369 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2569E502024967B007D4369 /* MBProgressHUD.bundle */; };
 		C2569E5420249785007D4369 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2569E5320249785007D4369 /* TableViewController.m */; };
+		C598BEC62100DF6C0007BB04 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C598BEC52100DF6C0007BB04 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		C2569E502024967B007D4369 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		C2569E5220249785007D4369 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		C2569E5320249785007D4369 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		C598BEC42100DF6C0007BB04 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		C598BEC52100DF6C0007BB04 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		F635F99428E707F3B97FEA54 /* Pods-WBMBProgressHUDManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBMBProgressHUDManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBMBProgressHUDManager/Pods-WBMBProgressHUDManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +95,8 @@
 				C2569E37202493D6007D4369 /* AppDelegate.m */,
 				C2569E5220249785007D4369 /* TableViewController.h */,
 				C2569E5320249785007D4369 /* TableViewController.m */,
+				C598BEC42100DF6C0007BB04 /* SecondViewController.h */,
+				C598BEC52100DF6C0007BB04 /* SecondViewController.m */,
 				C2569E3C202493D6007D4369 /* Main.storyboard */,
 				C2569E3F202493D6007D4369 /* Assets.xcassets */,
 				C2569E41202493D6007D4369 /* LaunchScreen.storyboard */,
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C598BEC62100DF6C0007BB04 /* SecondViewController.m in Sources */,
 				C2569E46202493D6007D4369 /* main.m in Sources */,
 				C2569E38202493D6007D4369 /* AppDelegate.m in Sources */,
 				C2569E4F2024945A007D4369 /* MBProgressHUD+WBAddtional.m in Sources */,

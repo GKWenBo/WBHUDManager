@@ -8,15 +8,22 @@
 
 #import "TableViewController.h"
 #import "MBProgressHUD+WBAddtional.h"
+#import "SecondViewController.h"
 @interface TableViewController ()
 
 @end
 
 @implementation TableViewController
+- (IBAction)hideAction:(id)sender {
+    NSLog(@"点击隐藏");
+//    [MBProgressHUD wb_hideHUDForView:self.view];
+    
+    SecondViewController *vc =[SecondViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -33,42 +40,40 @@
     switch (indexPath.row) {
         case 0:
             {
-                
-                [MBProgressHUD wb_showActivity];
-                [MBProgressHUD wb_maskLayerEnabled:NO];
-                [MBProgressHUD wb_lockScreen:NO];
+                [MBProgressHUD wb_showActivityMessage:@"加载中..."
+                                               toView:self.view];
             }
             break;
         case 1:
         {
             
-            [MBProgressHUD wb_showActivityMessage:@"加载中..."];
-            [MBProgressHUD wb_maskLayerEnabled:YES];
+//            [MBProgressHUD wb_showActivityMessage:@"加载中..."];
+//            [MBProgressHUD wb_maskLayerEnabled:YES];
         }
             break;
         case 2:
         {
-            [MBProgressHUD wb_showSuccess:@"登录成功" completion:nil];
+//            [MBProgressHUD wb_showSuccess:@"登录成功" completion:nil];
         }
             break;
         case 3:
         {
-            [MBProgressHUD wb_showError:@"失败提示" completion:nil];
+//            [MBProgressHUD wb_showError:@"失败提示" completion:nil];
         }
             break;
         case 4:
         {
-            [MBProgressHUD wb_showInfo:@"信息提示" completion:nil];
+//            [MBProgressHUD wb_showInfo:@"信息提示" completion:nil];
         }
             break;
         case 5:
         {
-            [MBProgressHUD wb_showWarning:@"警告提示" completion:nil];
+//            [MBProgressHUD wb_showWarning:@"警告提示" completion:nil];
         }
             break;
         case 6:
         {
-            [MBProgressHUD wb_showMessage:@"文字提示" completion:nil];
+//            [MBProgressHUD wb_showMessage:@"文字提示" completion:nil];
         }
             break;
         default:
@@ -77,7 +82,9 @@
 }
 
 #pragma mark - Table view data source
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"点击了");
+}
 
 
 @end

@@ -33,14 +33,17 @@
     switch (indexPath.row) {
         case 0:
             {
-                [MBProgressHUD wb_maskLayerEnabled:NO];
+                
                 [MBProgressHUD wb_showActivity];
+                [MBProgressHUD wb_maskLayerEnabled:NO];
+                [MBProgressHUD wb_lockScreen:NO];
             }
             break;
         case 1:
         {
-            [MBProgressHUD wb_maskLayerEnabled:YES];
+            
             [MBProgressHUD wb_showActivityMessage:@"加载中..."];
+            [MBProgressHUD wb_maskLayerEnabled:YES];
         }
             break;
         case 2:

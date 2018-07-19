@@ -14,20 +14,16 @@ NSTimeInterval const KHideAfterDelayTime = 1.f;
 NSTimeInterval const kActivityMinDismissTime = 0.5f;
 
 /** << 是否显示蒙层 default is YES > */
-static BOOL isNeedShowMaskLayer = YES;
+static const char kWBMBProgressHUDKey;
 
 @implementation MBProgressHUD (WBAddtional)
 
-#pragma mark ------ < Mask Layer > ------
-#pragma mark
-+ (void)wb_maskLayerEnabled:(BOOL)enabled {
-    isNeedShowMaskLayer = enabled;
-}
-
 #pragma mark --------  Basic Method   --------
-#pragma mark
 + (MBProgressHUD *)wb_showActivityMessage:(NSString *)message
                                    toView:(UIView *)view {
+    
+    [self wb_hideHUD];
+    
     if (!view) view = [UIApplication sharedApplication].delegate.window;    /**  快速显示提示信息  */
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     /**  < 显示动画效果 >  */
@@ -42,13 +38,16 @@ static BOOL isNeedShowMaskLayer = YES;
     hud.contentColor = [UIColor whiteColor];
     /**  < 最小显示时间 >  */
     hud.minShowTime = kActivityMinDismissTime;
-    [self wb_configMaskLayer:hud];
+    objc_setAssociatedObject(self, &kWBMBProgressHUDKey, hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return hud;
 }
 
-+ (void)wb_showMessage:(NSString *)message
-                toView:(UIView *)view
-            completion:(MBProgressHUDCompletionBlock)completion{
++ (MBProgressHUD *)wb_showMessage:(NSString *)message
+                           toView:(UIView *)view
+                       completion:(MBProgressHUDCompletionBlock)completion{
+    
+    [self wb_hideHUD];
+    
     if (!view) view = [UIApplication sharedApplication].delegate.window;
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.animationType = MBProgressHUDAnimationZoom;
@@ -57,17 +56,21 @@ static BOOL isNeedShowMaskLayer = YES;
     hud.removeFromSuperViewOnHide = YES;
     hud.bezelView.color = [[UIColor blackColor] colorWithAlphaComponent:0.85f];
     hud.contentColor = [UIColor whiteColor];
-    hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
+//    hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
     [hud hideAnimated:YES afterDelay:KHideAfterDelayTime];
     hud.minShowTime = kMinShowTime;
-    [self wb_configMaskLayer:hud];
     hud.completionBlock = completion;
+    objc_setAssociatedObject(self, &kWBMBProgressHUDKey, hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    return hud;
 }
 
-+ (void)wb_show:(NSString *)text
-           icon:(NSString *)icon
-           view:(UIView *)view
++ (MBProgressHUD *)wb_show:(NSString *)text
+                      icon:(NSString *)icon
+                      view:(UIView *)view
      completion:(MBProgressHUDCompletionBlock)completion {
+    
+    [self wb_hideHUD];
+    
     if (view == nil) view = [UIApplication sharedApplication].delegate.window;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.animationType = MBProgressHUDAnimationZoom;
@@ -79,84 +82,111 @@ static BOOL isNeedShowMaskLayer = YES;
     hud.removeFromSuperViewOnHide = YES;
     hud.bezelView.color = [[UIColor blackColor] colorWithAlphaComponent:0.85f];
     hud.contentColor = [UIColor whiteColor];
-    hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
+//    hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
     hud.minShowTime = kMinShowTime;
     [hud hideAnimated:YES afterDelay:KHideAfterDelayTime];
     hud.completionBlock = completion;
+    objc_setAssociatedObject(self, &kWBMBProgressHUDKey, hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    return hud;
 }
 
-+ (void)wb_showSuccess:(NSString *)success
-                toView:(UIView *)view
-            completion:(MBProgressHUDCompletionBlock)completion{
-    [self wb_show:success icon:@"success" view:view completion:completion];
++ (MBProgressHUD *)wb_showSuccess:(NSString *)success
+                           toView:(UIView *)view
+                       completion:(MBProgressHUDCompletionBlock)completion{
+    return [self wb_show:success
+                    icon:@"success"
+                    view:view
+              completion:completion];
 }
 
-+ (void)wb_showError:(NSString *)error toView:(UIView *)view completion:(MBProgressHUDCompletionBlock)completion{
-    [self wb_show:error icon:@"error" view:view completion:completion];
++ (MBProgressHUD *)wb_showError:(NSString *)error
+                         toView:(UIView *)view
+                     completion:(MBProgressHUDCompletionBlock)completion {
+    return [self wb_show:error
+                    icon:@"error"
+                    view:view
+              completion:completion];
 }
 
-+ (void)wb_showInfo:(NSString *)info
-             toView:(UIView *)view
-         completion:(MBProgressHUDCompletionBlock)completion {
-    [self wb_show:info icon:@"MBHUD_Info" view:view completion:completion];
++ (MBProgressHUD *)wb_showInfo:(NSString *)info
+                        toView:(UIView *)view
+                    completion:(MBProgressHUDCompletionBlock)completion {
+    return [self wb_show:info
+                    icon:@"MBHUD_Info"
+                    view:view
+              completion:completion];
 }
 
-+ (void)wb_showWarning:(NSString *)warning
-                toView:(UIView *)view completion:(MBProgressHUDCompletionBlock)completion{
-    [self wb_show:warning icon:@"MBHUD_Warn" view:view completion:completion];
++ (MBProgressHUD *)wb_showWarning:(NSString *)warning
+                           toView:(UIView *)view
+                       completion:(MBProgressHUDCompletionBlock)completion{
+    return [self wb_show:warning
+                    icon:@"MBHUD_Warn"
+                    view:view
+              completion:completion];
 }
 
 #pragma mark --------  Activity && Text  --------
 #pragma mark
 + (MBProgressHUD *)wb_showActivity {
-    MBProgressHUD *hud = [self wb_showActivityMessage:nil toView:nil];
+    MBProgressHUD *hud = [self wb_showActivityMessage:nil
+                                               toView:nil];
     hud.square = YES;
     return hud;
 }
 
 + (MBProgressHUD *)wb_showActivityMessage:(NSString *)message {
-    return [self wb_showActivityMessage:message toView:nil];
+    return [self wb_showActivityMessage:message
+                                 toView:nil];
 }
 
 #pragma mark --------  Text && Image  --------
 #pragma mark
-+ (void)wb_showSuccess:(NSString *)success completion:(MBProgressHUDCompletionBlock)completion {
-    [self wb_hideHUD];
-    [self wb_showSuccess:success toView:nil completion:completion];
++ (MBProgressHUD *)wb_showSuccess:(NSString *)success
+                       completion:(MBProgressHUDCompletionBlock)completion {
+    return [self wb_showSuccess:success
+                         toView:nil
+                     completion:completion];
 }
 
-+ (void)wb_showError:(NSString *)error completion:(MBProgressHUDCompletionBlock)completion{
-    [self wb_hideHUD];
-    [self wb_showError:error toView:nil completion:completion];
++ (MBProgressHUD *)wb_showError:(NSString *)error
+                     completion:(MBProgressHUDCompletionBlock)completion{
+    return [self wb_showError:error
+                       toView:nil
+                   completion:completion];
 }
 
-+ (void)wb_showInfo:(NSString *)info completion:(MBProgressHUDCompletionBlock)completion{
-    [self wb_hideHUD];
-    [self wb_showInfo:info toView:nil completion:completion];
++ (MBProgressHUD *)wb_showInfo:(NSString *)info
+                    completion:(MBProgressHUDCompletionBlock)completion{
+    return [self wb_showInfo:info
+                      toView:nil
+                  completion:completion];
 }
 
-+ (void)wb_showWarning:(NSString *)warning completion:(MBProgressHUDCompletionBlock)completion{
-    [self wb_hideHUD];
-    [self wb_showWarning:warning toView:nil completion:completion];
++ (MBProgressHUD *)wb_showWarning:(NSString *)warning
+                       completion:(MBProgressHUDCompletionBlock)completion{
+    return [self wb_showWarning:warning
+                         toView:nil
+                     completion:completion];
 }
 
-+ (void)wb_showMessage:(NSString *)message completion:(MBProgressHUDCompletionBlock)completion{
-    [self wb_hideHUD];
-    [self wb_showMessage:message toView:nil completion:completion];
++ (MBProgressHUD *)wb_showMessage:(NSString *)message
+                       completion:(MBProgressHUDCompletionBlock)completion{
+    return [self wb_showMessage:message
+                         toView:nil
+                     completion:completion];
 }
 
 #pragma mark --------  Hide  --------
 #pragma mark
 + (void)wb_hideHUD {
     /** << 隐藏WindowHUD > */
-    UIView *winView = (UIView*)[UIApplication sharedApplication].delegate.window;
-    [self hideHUDForView:winView animated:YES];
-    /** << 隐藏view的HUD > */
-    [self hideHUDForView:[self wb_getCurrentVc].view animated:YES];
-}
-
-+ (void)wb_hideHUDForView:(UIView *)view {
-    [self hideHUDForView:view animated:YES];
+    MBProgressHUD *hud = objc_getAssociatedObject(self, &kWBMBProgressHUDKey);
+    if (hud) {
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hideAnimated:YES];
+        objc_setAssociatedObject(self, &kWBMBProgressHUDKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
 }
 
 #pragma mark ------ < Event Response > ------
@@ -213,19 +243,21 @@ static BOOL isNeedShowMaskLayer = YES;
     return superVC;
 }
 
-+ (void)wb_addTapGestureRecognizer:(UIView *)view {
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taped:)];
-    [view addGestureRecognizer:tap];
-}
-
-+ (void)wb_configMaskLayer:(MBProgressHUD *)hud {
-    /** << 设置蒙层 > */
-    if (isNeedShowMaskLayer) {
-        /**  < 蒙层颜色 >  */
++ (void)wb_maskLayerEnabled:(BOOL)enabled {
+    if (enabled) {
+        MBProgressHUD *hud = objc_getAssociatedObject(self, &kWBMBProgressHUDKey);
         hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
     }
-    /** << 添加单击手势 > */
-    [self wb_addTapGestureRecognizer:hud.backgroundView];
+}
+
++ (void)wb_lockScreen:(BOOL)lockScreen {
+    if (!lockScreen) {
+        MBProgressHUD *hud = objc_getAssociatedObject(self, &kWBMBProgressHUDKey);
+        if (hud) {
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taped:)];
+            [hud.backgroundView addGestureRecognizer:tap];
+        }
+    }
 }
 
 @end

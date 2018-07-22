@@ -16,10 +16,10 @@
 @implementation TableViewController
 - (IBAction)hideAction:(id)sender {
     NSLog(@"点击隐藏");
-//    [MBProgressHUD wb_hideHUDForView:self.view];
+    [MBProgressHUD wb_hideHUDForView:self.view];
     
-    SecondViewController *vc =[SecondViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+//    SecondViewController *vc =[SecondViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -29,6 +29,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,15 +41,14 @@
     switch (indexPath.row) {
         case 0:
             {
-                [MBProgressHUD wb_showActivityMessage:@"加载中..."
-                                               toView:self.view];
+                [MBProgressHUD wb_showActivity:self.view];
             }
             break;
         case 1:
         {
             
-//            [MBProgressHUD wb_showActivityMessage:@"加载中..."];
-//            [MBProgressHUD wb_maskLayerEnabled:YES];
+            [MBProgressHUD wb_showActivityMessage:@"加载中..."
+                                           toView:self.view];
         }
             break;
         case 2:
@@ -64,6 +64,14 @@
         case 4:
         {
 //            [MBProgressHUD wb_showInfo:@"信息提示" completion:nil];
+//            [MBProgressHUD wb_showMessage:@"信息提示"];
+            [MBProgressHUD wb_showMessage:@"信息提示"
+                                   toView:self.view
+                                 position:WBHUDPositionTopStyle
+                               completion:^{
+                                   NSLog(@"显示完成");
+                               }];
+            
         }
             break;
         case 5:

@@ -31,30 +31,11 @@ UIKIT_EXTERN NSTimeInterval const kActivityMinDismissTime;
 #define kWBHUDCustomContentColor [UIColor colorWithWhite:1.f alpha:0.7f]
 /** < 方框颜色 > */
 #define kWBHUDCustomBezelColor [UIColor colorWithWhite:1.f alpha:0.7f]
-/** < 蒙版颜色 > */
-#define kWBHUDMaskBackgroundColor [[UIColor blackColor] colorWithAlphaComponent:0.5];
+/** < 自定义蒙版颜色 > */
+#define kWBHUDCustomMaskBackgroundColor [[UIColor blackColor] colorWithAlphaComponent:0.5f];
 
 @interface MBProgressHUD (WBAddtional)
 
-// MARK:Property
-/** < 内容文字颜色 > */
-@property (nonatomic, assign, readonly) MBProgressHUD *(^hudContentStyle)(WBHUDContentStyle hudContentStyle);
-/** < 蒙版颜色 > */
-@property (nonatomic, strong, readonly) MBProgressHUD *(^hudMaskColor)(UIColor *hudMaskColor);
-/** < 内容颜色 > */
-@property (nonatomic, strong, readonly) MBProgressHUD *(^hudContentColor)(UIColor *hudContentColor);
-/** < 容器颜色 > */
-@property (nonatomic, strong, readonly) MBProgressHUD *(^hudBezelColor)(UIColor *hudBezelColor);
-
-///**
-// *  显示提示文字
-// *
-// *  @param message 提示信息
-// *  @param view 显示的视图
-// */
-//+ (MBProgressHUD *)wb_showMessage:(NSString *)message
-//                           toView:(UIView *)view
-//                       completion:(MBProgressHUDCompletionBlock)completion;
 ///**
 // *  自定义成功提示
 // *
@@ -108,14 +89,22 @@ UIKIT_EXTERN NSTimeInterval const kActivityMinDismissTime;
 
 // MARK:Loading
 /**
- 只显示菊花，不会自动消失
+ 只显示菊花，不会自动消失 (白字+黑底)
 
  @return MBProgressHUD实例对象
  */
 + (MBProgressHUD *)wb_showActivity;
 
 /**
- 菊花+文字
+ 只显示菊花，不会自动消失 (白字+黑底+自定义视图)
+
+ @param view 要显示的视图
+ @return MBProgressHUD实例对象
+ */
++ (MBProgressHUD *)wb_showActivity:(UIView *)view;
+
+/**
+ 菊花+文字 (白字+黑底)
 
  @param message 加载文字
  @return  MBProgressHUD实例对象
@@ -123,7 +112,7 @@ UIKIT_EXTERN NSTimeInterval const kActivityMinDismissTime;
 + (MBProgressHUD *)wb_showActivityMessage:(NSString *)message;
 
 /**
- 菊花+文字
+ 菊花+文字 (白字+黑底)
 
  @param message 加载文字
  @param view 要显示的视图
@@ -133,11 +122,11 @@ UIKIT_EXTERN NSTimeInterval const kActivityMinDismissTime;
                                    toView:(UIView *)view;
 
 /**
- 菊花+文字
+ 菊花+文字 （自定义文字+内容颜色+蒙版颜色+容器颜色）
 
  @param message 加载文字
  @param view 要显示的视图
- @param contentColor 加载文字颜色
+ @param contentColor 内容颜色
  @param maskColor 蒙版颜色
  @param bezelColor 容器颜色
  @return MBProgressHUD实例对象
@@ -148,54 +137,80 @@ UIKIT_EXTERN NSTimeInterval const kActivityMinDismissTime;
                                 maskColor:(UIColor *)maskColor
                                bezelColor:(UIColor *)bezelColor;
 
-// MARK:Text
+/**
+ 菊花+文字 （自定义文字+文字颜色+蒙版颜色+容器颜色）
 
-//#pragma mark --------  Text && Image  --------
-///**
-// 文字提示
-//
-// @param message 提示文字
-// @param completion 完成回调
-// */
-//+ (MBProgressHUD *)wb_showMessage:(NSString *)message
-//                       completion:(MBProgressHUDCompletionBlock)completion;
-//
-///**
-// 成功提示
-//
-// @param success 提示文字
-// @param completion 完成回调
-// */
-//+ (MBProgressHUD *)wb_showSuccess:(NSString *)success
-//                       completion:(MBProgressHUDCompletionBlock)completion;
-//
-///**
-// 错误提示
-//
-// @param error 提示文字
-// @param completion 完成回调
-// */
-//+ (MBProgressHUD *)wb_showError:(NSString *)error
-//                     completion:(MBProgressHUDCompletionBlock)completion;
-//
-///**
-// 信息提示
-//
-// @param info 提示文字
-// @param completion 完成回调
-// */
-//+ (MBProgressHUD *)wb_showInfo:(NSString *)info
-//                    completion:(MBProgressHUDCompletionBlock)completion;
-//
-///**
-// 警告提示
-//
-// @param warning 提示文字
-// @param completion 完成回调
-// */
-//+ (MBProgressHUD *)wb_showWarning:(NSString *)warning
-//                       completion:(MBProgressHUDCompletionBlock)completion;
-//
+ @param message 加载文字
+ @param view 要显示的视图
+ @param titleColor 文字颜色
+ @param maskColor 蒙版颜色
+ @param bezelColor 容器颜色
+ @return MBProgressHUD实例对象
+ */
++ (MBProgressHUD *)wb_showActivityMessage:(NSString *)message
+                                   toView:(UIView *)view
+                               titleColor:(UIColor *)titleColor
+                                maskColor:(UIColor *)maskColor
+                               bezelColor:(UIColor *)bezelColor;
+
+
+// MARK:Text
+/**
+ 提示文字 （自定义文+位置中间+显示在window）
+
+ @param message 文字
+ */
++ (void)wb_showMessage:(NSString *)message;
+
+/**
+ 提示文字（自定义文+位置中间+显示在window+完成回调）
+
+ @param message 文字
+ @param completion 完成回调
+ */
++ (void)wb_showMessage:(NSString *)message
+            completion:(MBProgressHUDCompletionBlock)completion;
+
+/**
+ 提示文字（自定文字+位置中间+自定义显示视图+完成回调）
+
+ @param message 文字
+ @param view 要显示的视图
+ @param completion 完成回调
+ */
++ (void)wb_showMessage:(NSString *)message
+                toView:(UIView *)view
+            completion:(MBProgressHUDCompletionBlock)completion;
+
+/**
+ 提示文字 (自定义文字+自定义位置+自定义显示视图)
+
+ @param message 文字
+ @param view 要显示的视图
+ @param position 位置
+ @param completion 完成回调
+ */
++ (void)wb_showMessage:(NSString *)message
+                toView:(UIView *)view
+              position:(WBHUDPositionStyle)position
+            completion:(MBProgressHUDCompletionBlock)completion;
+
+/**
+ 提示文字 (自定义文字+详情文字+自定义位置+内容样式)
+
+ @param message 文字
+ @param detailTitle 详情文字
+ @param view 要显示的视图
+ @param position 显示位置
+ @param contentStyle 内容样式
+ @param completion 完成回调
+ */
++ (void)wb_showMessage:(NSString *)message
+           detailTitle:(NSString *)detailTitle
+                toView:(UIView *)view
+              position:(WBHUDPositionStyle)position
+          contentStyle:(WBHUDContentStyle)contentStyle
+            completion:(MBProgressHUDCompletionBlock)completion;
 
 // MARK:Hide
 + (void)wb_hideHUD;

@@ -7,33 +7,35 @@
 //
 
 #import "MBProgressHUD+WBAddtional.h"
-
+#import "MBProgressHUD+WBHUDExtension.h"
 
 NSTimeInterval const kMinShowTime = 1.f;
-NSTimeInterval const KHideAfterDelayTime = 1.f;
+NSTimeInterval const KHideAfterDelayTime = 1.2f;
 NSTimeInterval const kActivityMinDismissTime = 0.5f;
 
 @implementation MBProgressHUD (WBAddtional)
 
 /** < 创建HUD > */
-NS_INLINE MBProgressHUD *createHUD(UIView *view) {
++ (MBProgressHUD *)wb_createHUD:(UIView *)view {
     if (view == nil) view = (UIView *)[UIApplication sharedApplication].delegate.window;
     return [MBProgressHUD showHUDAddedTo:view
                                 animated:YES];
 }
 
 /** < 设置HUD > */
-NS_INLINE MBProgressHUD *configHUD(UIView *view, NSString *title, BOOL autoDismiss) {
-    MBProgressHUD *hud = createHUD(view);
-    hud.label.text = title;
++ (MBProgressHUD *)wb_configHUDWithView:(UIView *)view
+                                  title:(NSString *)title
+                            autoDismiss:(BOOL)autoDismiss
+                             completion:(MBProgressHUDCompletionBlock)completion {
+    MBProgressHUD *hud = [self wb_createHUD:view];
     /** < 自动换行 > */
     hud.label.numberOfLines = 0;
+    /** < 提示文字 > */
+    hud.title(title);
     /** < 隐藏移除 > */
     hud.removeFromSuperViewOnHide = YES;
     /** <默认内容样式：黑底白字 > */
     hud.hudContentStyle(WBHUDContentBlackStyle);
-    /** < 加载提示最小显示时间 > */
-    hud.minShowTime = kActivityMinDismissTime;
     /** < 自动隐藏 > */
     if (autoDismiss) {
         [hud hideAnimated:YES
@@ -47,6 +49,11 @@ NS_INLINE MBProgressHUD *configHUD(UIView *view, NSString *title, BOOL autoDismi
                                  toView:nil];
 }
 
++ (MBProgressHUD *)wb_showActivity:(UIView *)view {
+    return [self wb_showActivityMessage:nil
+                                 toView:view];
+}
+
 + (MBProgressHUD *)wb_showActivityMessage:(NSString *)message {
     return [self wb_showActivityMessage:message
                                  toView:nil];
@@ -54,8 +61,13 @@ NS_INLINE MBProgressHUD *configHUD(UIView *view, NSString *title, BOOL autoDismi
 
 + (MBProgressHUD *)wb_showActivityMessage:(NSString *)message
                                    toView:(UIView *)view {
-    MBProgressHUD *hud = configHUD(view, message, NO);
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:message
+                                        autoDismiss:NO
+                                         completion:nil];
     hud.mode = MBProgressHUDModeIndeterminate;
+    /** < 加载提示最小显示时间 > */
+    hud.minShowTime = kActivityMinDismissTime;
     return hud;
 }
 
@@ -64,36 +76,91 @@ NS_INLINE MBProgressHUD *configHUD(UIView *view, NSString *title, BOOL autoDismi
                              contentColor:(UIColor *)contentColor
                                 maskColor:(UIColor *)maskColor
                                bezelColor:(UIColor *)bezelColor {
-    MBProgressHUD *hud = configHUD(view, message, NO);
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:message
+                                        autoDismiss:NO
+                                         completion:nil];
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.hudContentColor(contentColor);
     hud.hudMaskColor(maskColor);
     hud.hudBezelColor(bezelColor);
+    /** < 加载提示最小显示时间 > */
+    hud.minShowTime = kActivityMinDismissTime;
     return hud;
 }
 
-//
-//+ (MBProgressHUD *)wb_showMessage:(NSString *)message
-//                           toView:(UIView *)view
-//                       completion:(MBProgressHUDCompletionBlock)completion{
-//
-//    [self wb_hideHUD];
-//
-//    if (!view) view = [UIApplication sharedApplication].delegate.window;
-//    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-//    hud.animationType = MBProgressHUDAnimationZoom;
-//    hud.mode = MBProgressHUDModeText;
-//    hud.label.text = message;
-//    hud.removeFromSuperViewOnHide = YES;
-//    hud.bezelView.color = [[UIColor blackColor] colorWithAlphaComponent:0.85f];
-//    hud.contentColor = [UIColor whiteColor];
-////    hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
-//    [hud hideAnimated:YES afterDelay:KHideAfterDelayTime];
-//    hud.minShowTime = kMinShowTime;
-//    hud.completionBlock = completion;
-//    objc_setAssociatedObject(self, &kWBMBProgressHUDKey, hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//    return hud;
-//}
++ (MBProgressHUD *)wb_showActivityMessage:(NSString *)message
+                                   toView:(UIView *)view
+                               titleColor:(UIColor *)titleColor
+                                maskColor:(UIColor *)maskColor
+                               bezelColor:(UIColor *)bezelColor {
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:message
+                                        autoDismiss:NO
+                                         completion:nil];
+    hud.titleColor(titleColor);
+    hud.hudMaskColor(maskColor);
+    hud.hudBezelColor(bezelColor);
+    /** < 加载提示最小显示时间 > */
+    hud.minShowTime = kActivityMinDismissTime;
+    return hud;
+}
+
+// MARK:Text
++ (void)wb_showMessage:(NSString *)message {
+    [self wb_showMessage:message
+                  toView:nil
+              completion:nil];
+}
+
++ (void)wb_showMessage:(NSString *)message
+            completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_showMessage:message
+                  toView:nil
+              completion:completion];
+}
+
++ (void)wb_showMessage:(NSString *)message
+                toView:(UIView *)view
+            completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_showMessage:message
+             detailTitle:nil
+                  toView:view
+                position:WBHUDPositionCenterStyle
+            contentStyle:WBHUDContentBlackStyle
+              completion:completion];
+}
+
++ (void)wb_showMessage:(NSString *)message
+                toView:(UIView *)view
+              position:(WBHUDPositionStyle)position
+            completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_showMessage:message
+             detailTitle:nil
+                  toView:view
+                position:position
+            contentStyle:WBHUDContentBlackStyle
+              completion:completion];
+}
+
++ (void)wb_showMessage:(NSString *)message
+           detailTitle:(NSString *)detailTitle
+                toView:(UIView *)view
+              position:(WBHUDPositionStyle)position
+          contentStyle:(WBHUDContentStyle)contentStyle
+            completion:(MBProgressHUDCompletionBlock)completion {
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:message
+                                        autoDismiss:YES
+                                         completion:nil];
+    hud.mode = MBProgressHUDModeText;
+    hud.detailTitle(detailTitle);
+    hud.hudPositon(position);
+    hud.hudContentStyle(contentStyle);
+    hud.minShowTime = kMinShowTime;
+    hud.completionBlock = completion;
+}
+
 //
 //+ (MBProgressHUD *)wb_show:(NSString *)text
 //                      icon:(NSString *)icon
@@ -196,24 +263,7 @@ NS_INLINE MBProgressHUD *configHUD(UIView *view, NSString *title, BOOL autoDismi
 //                     completion:completion];
 //}
 //
-//#pragma mark --------  Hide  --------
-//#pragma mark
-//+ (void)wb_hideHUD {
-//    /** << 隐藏WindowHUD > */
-//    MBProgressHUD *hud = objc_getAssociatedObject(self, &kWBMBProgressHUDKey);
-//    if (hud) {
-//        hud.removeFromSuperViewOnHide = YES;
-//        [hud hideAnimated:YES];
-//        objc_setAssociatedObject(self, &kWBMBProgressHUDKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//    }
-//}
-//
-//#pragma mark ------ < Event Response > ------
-//#pragma mark
-//+ (void)taped:(UITapGestureRecognizer *)sender {
-//    [self wb_hideHUD];
-//}
-//
+
 //#pragma mark --------  Private Method  --------
 //#pragma mark
 ////获取当前屏幕显示的viewcontroller
@@ -260,23 +310,6 @@ NS_INLINE MBProgressHUD *configHUD(UIView *view, NSString *title, BOOL autoDismi
 //            return ((UINavigationController*)superVC).viewControllers.lastObject;
 //        }
 //    return superVC;
-//}
-//
-//+ (void)wb_maskLayerEnabled:(BOOL)enabled {
-//    if (enabled) {
-//        MBProgressHUD *hud = objc_getAssociatedObject(self, &kWBMBProgressHUDKey);
-//        hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
-//    }
-//}
-//
-//+ (void)wb_lockScreen:(BOOL)lockScreen {
-//    if (!lockScreen) {
-//        MBProgressHUD *hud = objc_getAssociatedObject(self, &kWBMBProgressHUDKey);
-//        if (hud) {
-//            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taped:)];
-//            [hud.backgroundView addGestureRecognizer:tap];
-//        }
-//    }
 //}
 
 // MARK:Hide
@@ -328,8 +361,48 @@ NS_INLINE MBProgressHUD *configHUD(UIView *view, NSString *title, BOOL autoDismi
 }
 
 - (MBProgressHUD *(^)(UIColor *))hudBezelColor {
-    return ^(UIColor *hudBezelColor){
+    return ^(UIColor *hudBezelColor) {
         self.bezelView.backgroundColor = hudBezelColor;
+        return self;
+    };
+}
+
+- (MBProgressHUD *(^)(NSString *))title {
+    return ^(NSString *title) {
+        self.label.text = title;
+        return self;
+    };
+}
+
+- (MBProgressHUD *(^)(NSString *))detailTitle {
+    return ^(NSString *detailTitle) {
+        self.detailsLabel.text = detailTitle;
+        return self;
+    };
+}
+
+- (MBProgressHUD *(^)(UIColor *))titleColor {
+    return ^(UIColor *titleColor) {
+        self.label.textColor = titleColor;
+        return self;
+    };
+}
+
+- (MBProgressHUD *(^)(WBHUDPositionStyle))hudPositon {
+    return ^(WBHUDPositionStyle hudPositon) {
+        switch (hudPositon) {
+            case WBHUDPositionTopStyle:
+                self.offset = CGPointMake(0, -MBProgressMaxOffset);
+                break;
+            case WBHUDPositionCenterStyle:
+                self.offset = CGPointZero;
+                break;
+            case WBHUDPositionBottomStyle:
+                self.offset = CGPointMake(0, MBProgressMaxOffset);
+                break;
+            default:
+                break;
+        }
         return self;
     };
 }

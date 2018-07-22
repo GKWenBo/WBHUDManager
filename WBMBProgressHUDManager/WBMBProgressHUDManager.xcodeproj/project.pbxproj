@@ -37,6 +37,7 @@
 		C2569E5320249785007D4369 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		C598BEC42100DF6C0007BB04 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		C598BEC52100DF6C0007BB04 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C598BEC72104AD770007BB04 /* MBProgressHUD+WBHUDExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBHUDExtension.h"; sourceTree = "<group>"; };
 		F635F99428E707F3B97FEA54 /* Pods-WBMBProgressHUDManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBMBProgressHUDManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBMBProgressHUDManager/Pods-WBMBProgressHUDManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +113,7 @@
 				C2569E502024967B007D4369 /* MBProgressHUD.bundle */,
 				C2569E4D2024945A007D4369 /* MBProgressHUD+WBAddtional.h */,
 				C2569E4E2024945A007D4369 /* MBProgressHUD+WBAddtional.m */,
+				C598BEC72104AD770007BB04 /* MBProgressHUD+WBHUDExtension.h */,
 			);
 			path = "MBProgressHUD+WBAddtional";
 			sourceTree = "<group>";

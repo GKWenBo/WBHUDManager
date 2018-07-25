@@ -8,10 +8,13 @@
 
 #import "MBProgressHUD+WBAddtional.h"
 #import "MBProgressHUD+WBHUDExtension.h"
+#import <objc/runtime.h>
 
 NSTimeInterval const kMinShowTime = 1.f;
 NSTimeInterval const KHideAfterDelayTime = 1.2f;
 NSTimeInterval const kActivityMinDismissTime = 0.5f;
+
+static char kWBHUDCancelKey;
 
 @implementation MBProgressHUD (WBAddtional)
 
@@ -41,6 +44,7 @@ NSTimeInterval const kActivityMinDismissTime = 0.5f;
         [hud hideAnimated:YES
                afterDelay:KHideAfterDelayTime];
     }
+    hud.completionBlock = completion;
     return hud;
 }
 
@@ -114,6 +118,28 @@ NSTimeInterval const kActivityMinDismissTime = 0.5f;
 }
 
 + (void)wb_showMessage:(NSString *)message
+         detailMessage:(NSString *)detailMessage {
+    [self wb_showMessage:message
+             detailTitle:detailMessage
+                  toView:nil
+                position:WBHUDPositionCenterStyle
+            contentStyle:WBHUDContentBlackStyle
+              completion:nil];
+}
+
++ (void)wb_showMessage:(NSString *)message
+         detailMessage:(NSString *)detailMessage
+                toView:(UIView *)view
+              position:(WBHUDPositionStyle)position {
+    [self wb_showMessage:message
+             detailTitle:detailMessage
+                  toView:view
+                position:position
+            contentStyle:WBHUDContentBlackStyle
+              completion:nil];
+}
+
++ (void)wb_showMessage:(NSString *)message
             completion:(MBProgressHUDCompletionBlock)completion {
     [self wb_showMessage:message
                   toView:nil
@@ -152,117 +178,185 @@ NSTimeInterval const kActivityMinDismissTime = 0.5f;
     MBProgressHUD *hud = [self wb_configHUDWithView:view
                                               title:message
                                         autoDismiss:YES
-                                         completion:nil];
+                                         completion:completion];
     hud.mode = MBProgressHUDModeText;
     hud.detailTitle(detailTitle);
     hud.hudPositon(position);
     hud.hudContentStyle(contentStyle);
     hud.minShowTime = kMinShowTime;
-    hud.completionBlock = completion;
 }
 
-//
-//+ (MBProgressHUD *)wb_show:(NSString *)text
-//                      icon:(NSString *)icon
-//                      view:(UIView *)view
-//     completion:(MBProgressHUDCompletionBlock)completion {
-//
-//    [self wb_hideHUD];
-//
-//    if (view == nil) view = [UIApplication sharedApplication].delegate.window;
-//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-//    hud.animationType = MBProgressHUDAnimationZoom;
-//    hud.mode = MBProgressHUDModeCustomView;
-//    hud.label.text = text;
-//    UIImageView * imageView = [[UIImageView alloc]init];
-//    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@",icon]];
-//    hud.customView = imageView;
-//    hud.removeFromSuperViewOnHide = YES;
-//    hud.bezelView.color = [[UIColor blackColor] colorWithAlphaComponent:0.85f];
-//    hud.contentColor = [UIColor whiteColor];
-////    hud.backgroundView.color = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
-//    hud.minShowTime = kMinShowTime;
-//    [hud hideAnimated:YES afterDelay:KHideAfterDelayTime];
-//    hud.completionBlock = completion;
-//    objc_setAssociatedObject(self, &kWBMBProgressHUDKey, hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//    return hud;
-//}
-//
-//+ (MBProgressHUD *)wb_showSuccess:(NSString *)success
-//                           toView:(UIView *)view
-//                       completion:(MBProgressHUDCompletionBlock)completion{
-//    return [self wb_show:success
-//                    icon:@"success"
-//                    view:view
-//              completion:completion];
-//}
-//
-//+ (MBProgressHUD *)wb_showError:(NSString *)error
-//                         toView:(UIView *)view
-//                     completion:(MBProgressHUDCompletionBlock)completion {
-//    return [self wb_show:error
-//                    icon:@"error"
-//                    view:view
-//              completion:completion];
-//}
-//
-//+ (MBProgressHUD *)wb_showInfo:(NSString *)info
-//                        toView:(UIView *)view
-//                    completion:(MBProgressHUDCompletionBlock)completion {
-//    return [self wb_show:info
-//                    icon:@"MBHUD_Info"
-//                    view:view
-//              completion:completion];
-//}
-//
-//+ (MBProgressHUD *)wb_showWarning:(NSString *)warning
-//                           toView:(UIView *)view
-//                       completion:(MBProgressHUDCompletionBlock)completion{
-//    return [self wb_show:warning
-//                    icon:@"MBHUD_Warn"
-//                    view:view
-//              completion:completion];
-//}
-//
+// MARK:Image
++ (void)wb_showSuccess:(NSString *)success {
+    [self wb_showSuccess:success
+                  toView:nil
+              completion:nil];
+}
++ (void)wb_showSuccess:(NSString *)success
+            completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_showSuccess:success
+                  toView:nil
+              completion:completion];
+}
++ (void)wb_showSuccess:(NSString *)success
+                toView:(UIView *)view
+            completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_show:success
+             icon:@"MBProgressHUD.bundle/success"
+             view:view
+       completion:completion];
+}
 
-//
-//#pragma mark --------  Text && Image  --------
-//#pragma mark
-//+ (MBProgressHUD *)wb_showSuccess:(NSString *)success
-//                       completion:(MBProgressHUDCompletionBlock)completion {
-//    return [self wb_showSuccess:success
-//                         toView:nil
-//                     completion:completion];
-//}
-//
-//+ (MBProgressHUD *)wb_showError:(NSString *)error
-//                     completion:(MBProgressHUDCompletionBlock)completion{
-//    return [self wb_showError:error
-//                       toView:nil
-//                   completion:completion];
-//}
-//
-//+ (MBProgressHUD *)wb_showInfo:(NSString *)info
-//                    completion:(MBProgressHUDCompletionBlock)completion{
-//    return [self wb_showInfo:info
-//                      toView:nil
-//                  completion:completion];
-//}
-//
-//+ (MBProgressHUD *)wb_showWarning:(NSString *)warning
-//                       completion:(MBProgressHUDCompletionBlock)completion{
-//    return [self wb_showWarning:warning
-//                         toView:nil
-//                     completion:completion];
-//}
-//
-//+ (MBProgressHUD *)wb_showMessage:(NSString *)message
-//                       completion:(MBProgressHUDCompletionBlock)completion{
-//    return [self wb_showMessage:message
-//                         toView:nil
-//                     completion:completion];
-//}
-//
++ (void)wb_showError:(NSString *)error {
+    [self wb_showError:error
+                toView:nil
+            completion:nil];
+}
+
++ (void)wb_showError:(NSString *)error
+          completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_showError:error
+                toView:nil
+            completion:completion];
+}
+
++ (void)wb_showError:(NSString *)error
+              toView:(UIView *)view
+          completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_show:error
+             icon:@"MBProgressHUD.bundle/error"
+             view:view
+       completion:completion];
+}
+
++ (void)wb_showInfo:(NSString *)info {
+    [self wb_showInfo:info
+               toView:nil
+           completion:nil];
+}
+
++ (void)wb_showInfo:(NSString *)info
+         completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_showInfo:info
+               toView:nil
+           completion:completion];
+}
+
++ (void)wb_showInfo:(NSString *)info
+             toView:(UIView *)view
+         completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_show:info
+             icon:@"MBProgressHUD.bundle/MBHUD_Info"
+             view:view
+       completion:completion];
+}
+
++ (void)wb_showWarning:(NSString *)warning {
+    [self wb_showWarning:warning
+                  toView:nil
+              completion:nil];
+}
+
++ (void)wb_showWarning:(NSString *)warning
+            completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_showWarning:warning
+                  toView:nil
+              completion:completion];
+}
+
++ (void)wb_showWarning:(NSString *)warning
+                toView:(UIView *)view
+            completion:(MBProgressHUDCompletionBlock)completion {
+    [self wb_show:warning
+             icon:@"MBProgressHUD.bundle/MBHUD_Warn"
+             view:view
+       completion:completion];
+}
+
++ (void)wb_show:(NSString *)text
+           icon:(NSString *)icon
+           view:(UIView *)view
+     completion:(MBProgressHUDCompletionBlock)completion {
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:text
+                                        autoDismiss:YES
+                                         completion:completion];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.animationType = MBProgressHUDAnimationZoom;
+    hud.iconName(icon);
+}
+
+// MARK:Switch Model
++ (MBProgressHUD *)wb_showModelSwitch:(UIView *)view
+                                title:(NSString *)title
+                          configBlock:(WBHUDConfigBlock)configBlock {
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:title
+                                        autoDismiss:NO
+                                         completion:nil];
+    hud.minSize = CGSizeMake(150.f, 100.f);
+    if (configBlock) {
+        configBlock(hud);
+    }
+    return hud;
+}
+
+// MARK:Progress
++ (MBProgressHUD *)wb_showDownloadToView:(UIView *)view
+                           progressStyle:(WBHUDProgressStyle)progressStyle
+                                   title:(NSString *)title
+                             configBlock:(WBHUDConfigBlock)configBlock;
+ {
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:title
+                                        autoDismiss:NO
+                                         completion:nil];
+    if (progressStyle == WBProgressHUDModeDeterminateStyle) {
+        hud.mode = MBProgressHUDModeDeterminate;
+    }
+    if (progressStyle == WBProgressHUDModeAnnularDeterminateStyle) {
+        hud.mode = MBProgressHUDModeAnnularDeterminate;
+    }
+    if (progressStyle == WBProgressHUDModeDeterminateHorizontalBarStyle) {
+        hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
+    }
+    if (configBlock) {
+        configBlock(hud);
+    }
+     return hud;
+}
+
++ (MBProgressHUD *)wb_showDownloadToView:(UIView *)view
+                           progressStyle:(WBHUDProgressStyle)progressStyle
+                                   title:(NSString *)title
+                             cancelTitle:(NSString *)cancelTitle
+                             configBlock:(WBHUDConfigBlock)configBlock
+                             cancelBlock:(WBHUDCancelBlock)cancelBlock {
+    MBProgressHUD *hud = [self wb_configHUDWithView:view
+                                              title:title
+                                        autoDismiss:NO
+                                         completion:nil];
+    if (progressStyle == WBProgressHUDModeDeterminateStyle) {
+        hud.mode = MBProgressHUDModeDeterminate;
+    }
+    if (progressStyle == WBProgressHUDModeAnnularDeterminateStyle) {
+        hud.mode = MBProgressHUDModeAnnularDeterminate;
+    }
+    if (progressStyle == WBProgressHUDModeDeterminateHorizontalBarStyle) {
+        hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
+    }
+    [hud.button setTitle:cancelTitle ? : NSLocalizedString(@"Cancel", @"HUD cancel button title")
+                forState:UIControlStateNormal];
+    [hud.button addTarget:self
+                   action:@selector(didClickedCancelBtn)
+         forControlEvents:UIControlEventTouchUpInside];
+    hud.cancelBlock = cancelBlock;
+    
+    if (configBlock) {
+        configBlock(hud);
+    }
+    return hud;
+}
 
 //#pragma mark --------  Private Method  --------
 //#pragma mark
@@ -405,6 +499,28 @@ NSTimeInterval const kActivityMinDismissTime = 0.5f;
         }
         return self;
     };
+}
+
+- (MBProgressHUD *(^)(NSString *))iconName {
+    return ^(NSString *iconName) {
+        self.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:iconName]];
+        return self;
+    };
+}
+
+- (void)setCancelBlock:(WBHUDCancelBlock)cancelBlock {
+    objc_setAssociatedObject(self, &kWBHUDCancelKey, cancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (WBHUDCancelBlock)cancelBlock {
+    return objc_getAssociatedObject(self, &kWBHUDCancelKey);
+}
+
+// MARK:Event Response
+- (void)didClickedCancelBtn {
+    if (self.cancelBlock) {
+        self.cancelBlock(self);
+    }
 }
 
 @end

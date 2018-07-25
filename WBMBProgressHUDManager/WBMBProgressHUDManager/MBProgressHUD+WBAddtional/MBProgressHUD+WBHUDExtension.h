@@ -27,5 +27,9 @@
 @property (nonatomic, strong, readonly) MBProgressHUD *(^titleColor)(UIColor *titleColor);
 /** < 文字显示位置 默认：WBHUDPositionCenterStyle > */
 @property (nonatomic, assign, readonly) MBProgressHUD *(^hudPositon)(WBHUDPositionStyle hudPositon);
+/*  < 自定义图片名 > */
+@property (nonatomic, copy, readonly) MBProgressHUD *(^iconName)(NSString *iconName);
+/*  < 取消按钮回调 > */
+@property (nonatomic, copy, readonly) WBHUDCancelBlock cancelBlock;
 
 @end

@@ -18,8 +18,8 @@
     NSLog(@"点击隐藏");
     [MBProgressHUD wb_hideHUDForView:self.view];
     
-//    SecondViewController *vc =[SecondViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
+    SecondViewController *vc =[SecondViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -29,7 +29,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationController.navigationBar.translucent = NO;
+//    self.navigationController.navigationBar.translucent = YES;
+//    if (@available(iOS 11.0, *)) {
+//        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//    }else {
+//        self.automaticallyAdjustsScrollViewInsets = NO;
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -150,10 +155,12 @@
     sleep(2);
 }
 
-#pragma mark - Table view data source
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"点击了");
-}
+//#pragma mark - Table view data source
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSLog(@"点击了");
+//    SecondViewController *vc = [SecondViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 
 @end

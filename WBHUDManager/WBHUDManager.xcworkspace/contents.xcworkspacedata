@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/wenmobo/Desktop/GitHub/WBHUDManager/WBHUDManager/WBHUDManager">
-   </FileRef>
-   <FileRef
       location = "group:WBHUDManager.xcodeproj">
    </FileRef>
    <FileRef

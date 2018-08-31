@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45886A8610E62FAF1D7B5015 /* Pods_WBHUDManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DF93BBBC0C3EDB73A3A71C /* Pods_WBHUDManagerUITests.framework */; };
-		8F8FD68F61BCE28464CC0E29 /* Pods_WBHUDManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8FC95E4B96008EAD13199 /* Pods_WBHUDManagerTests.framework */; };
+		0113ECC36CAAE55A28D0C181 /* Pods_WBHUDManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0F50059B784A93305586E0 /* Pods_WBHUDManager.framework */; };
+		464564936F71243C437EDBBB /* Pods_WBHUDManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC39F0D2FBD7E42FAE58A3E /* Pods_WBHUDManagerUITests.framework */; };
+		B8E8A68D91E91184F34F096B /* Pods_WBHUDManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B936A57BD02B190A0A6E76EB /* Pods_WBHUDManagerTests.framework */; };
 		C5F8297221396828001C11BC /* WBHUDManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8297121396828001C11BC /* WBHUDManagerTests.m */; };
 		C5F8297D21396828001C11BC /* WBHUDManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8297C21396828001C11BC /* WBHUDManagerUITests.m */; };
 		C5F829B12139734E001C11BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F829A62139734D001C11BC /* Assets.xcassets */; };
@@ -22,7 +23,6 @@
 		C5F829C321397378001C11BC /* MBProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829BE21397378001C11BC /* MBProgressHUD+WBAddtional.m */; };
 		C5F829C421397378001C11BC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5F829C121397378001C11BC /* MBProgressHUD.bundle */; };
 		C5F82A2321398143001C11BC /* WBHUDManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C5F82A2221398143001C11BC /* WBHUDManager.podspec */; };
-		D5FA6743D33D854E28D46520 /* Pods_WBHUDManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79C4EA1EA1CE87E510516F6 /* Pods_WBHUDManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A777045C0632C25053DA6F3 /* Pods-WBHUDManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.debug.xcconfig"; sourceTree = "<group>"; };
-		0B283A87C24258695370F665 /* Pods-WBHUDManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.release.xcconfig"; sourceTree = "<group>"; };
-		0E4822714EFAFED9A0502EEB /* Pods-WBHUDManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerUITests/Pods-WBHUDManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		20DF93BBBC0C3EDB73A3A71C /* Pods_WBHUDManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACE362673DAA21CBF9639C0C /* Pods-WBHUDManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerTests/Pods-WBHUDManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		4BC39F0D2FBD7E42FAE58A3E /* Pods_WBHUDManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C012C99C1D7FCD3C70668EC /* Pods-WBHUDManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerTests/Pods-WBHUDManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		85A8E0BC658B1DE019589F67 /* Pods-WBHUDManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerUITests/Pods-WBHUDManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		865B6FF821FCF4470091271D /* Pods-WBHUDManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerUITests/Pods-WBHUDManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B936A57BD02B190A0A6E76EB /* Pods_WBHUDManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0F50059B784A93305586E0 /* Pods_WBHUDManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF570C0B590FF2E61401B78F /* Pods-WBHUDManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.release.xcconfig"; sourceTree = "<group>"; };
 		C5F8295521396826001C11BC /* WBHUDManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBHUDManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F8296D21396828001C11BC /* WBHUDManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBHUDManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F8297121396828001C11BC /* WBHUDManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHUDManagerTests.m; sourceTree = "<group>"; };
@@ -72,10 +74,8 @@
 		C5F829C021397378001C11BC /* MBProgressHUD+WBAddtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBAddtional.h"; sourceTree = "<group>"; };
 		C5F829C121397378001C11BC /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		C5F82A2221398143001C11BC /* WBHUDManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WBHUDManager.podspec; sourceTree = SOURCE_ROOT; };
-		C79C4EA1EA1CE87E510516F6 /* Pods_WBHUDManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E15C424E9B64178614175EDF /* Pods-WBHUDManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerTests/Pods-WBHUDManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F6D8FC95E4B96008EAD13199 /* Pods_WBHUDManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEAA2E4AA1244582DDBB704A /* Pods-WBHUDManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerUITests/Pods-WBHUDManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBC052555E7C39775E7C479C /* Pods-WBHUDManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerTests/Pods-WBHUDManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB327049B7EBD4FFC26A08D7 /* Pods-WBHUDManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5FA6743D33D854E28D46520 /* Pods_WBHUDManager.framework in Frameworks */,
+				0113ECC36CAAE55A28D0C181 /* Pods_WBHUDManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8FD68F61BCE28464CC0E29 /* Pods_WBHUDManagerTests.framework in Frameworks */,
+				B8E8A68D91E91184F34F096B /* Pods_WBHUDManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,24 +99,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45886A8610E62FAF1D7B5015 /* Pods_WBHUDManagerUITests.framework in Frameworks */,
+				464564936F71243C437EDBBB /* Pods_WBHUDManagerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FA3D98E78727325E387FF9D /* Pods */ = {
+		ABFB7C20CDCBF89FF672DFE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A777045C0632C25053DA6F3 /* Pods-WBHUDManager.debug.xcconfig */,
-				0B283A87C24258695370F665 /* Pods-WBHUDManager.release.xcconfig */,
-				E15C424E9B64178614175EDF /* Pods-WBHUDManagerTests.debug.xcconfig */,
-				ACE362673DAA21CBF9639C0C /* Pods-WBHUDManagerTests.release.xcconfig */,
-				FEAA2E4AA1244582DDBB704A /* Pods-WBHUDManagerUITests.debug.xcconfig */,
-				0E4822714EFAFED9A0502EEB /* Pods-WBHUDManagerUITests.release.xcconfig */,
+				BF0F50059B784A93305586E0 /* Pods_WBHUDManager.framework */,
+				B936A57BD02B190A0A6E76EB /* Pods_WBHUDManagerTests.framework */,
+				4BC39F0D2FBD7E42FAE58A3E /* Pods_WBHUDManagerUITests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C5F8294C21396826001C11BC = {
@@ -126,8 +123,8 @@
 				C5F8297021396828001C11BC /* WBHUDManagerTests */,
 				C5F8297B21396828001C11BC /* WBHUDManagerUITests */,
 				C5F8295621396826001C11BC /* Products */,
-				0FA3D98E78727325E387FF9D /* Pods */,
-				DCDA6A223E05B4320385D3E8 /* Frameworks */,
+				F90BAA0AA9795FFAFAA79ADA /* Pods */,
+				ABFB7C20CDCBF89FF672DFE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,14 +213,17 @@
 			path = MBProgressHUDWBAddtional;
 			sourceTree = "<group>";
 		};
-		DCDA6A223E05B4320385D3E8 /* Frameworks */ = {
+		F90BAA0AA9795FFAFAA79ADA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C79C4EA1EA1CE87E510516F6 /* Pods_WBHUDManager.framework */,
-				F6D8FC95E4B96008EAD13199 /* Pods_WBHUDManagerTests.framework */,
-				20DF93BBBC0C3EDB73A3A71C /* Pods_WBHUDManagerUITests.framework */,
+				EB327049B7EBD4FFC26A08D7 /* Pods-WBHUDManager.debug.xcconfig */,
+				BF570C0B590FF2E61401B78F /* Pods-WBHUDManager.release.xcconfig */,
+				4C012C99C1D7FCD3C70668EC /* Pods-WBHUDManagerTests.debug.xcconfig */,
+				CBC052555E7C39775E7C479C /* Pods-WBHUDManagerTests.release.xcconfig */,
+				85A8E0BC658B1DE019589F67 /* Pods-WBHUDManagerUITests.debug.xcconfig */,
+				865B6FF821FCF4470091271D /* Pods-WBHUDManagerUITests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +237,7 @@
 				C5F8295121396826001C11BC /* Sources */,
 				C5F8295221396826001C11BC /* Frameworks */,
 				C5F8295321396826001C11BC /* Resources */,
-				AC3541B79A8C28779D73025C /* [CP] Embed Pods Frameworks */,
+				BB85ABBF97ED9F46D06A1AC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,7 +395,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC3541B79A8C28779D73025C /* [CP] Embed Pods Frameworks */ = {
+		BB85ABBF97ED9F46D06A1AC3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -611,15 +611,12 @@
 		};
 		C5F8298221396828001C11BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A777045C0632C25053DA6F3 /* Pods-WBHUDManager.debug.xcconfig */;
+			baseConfigurationReference = EB327049B7EBD4FFC26A08D7 /* Pods-WBHUDManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WBHUDManager/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -628,15 +625,12 @@
 		};
 		C5F8298321396828001C11BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B283A87C24258695370F665 /* Pods-WBHUDManager.release.xcconfig */;
+			baseConfigurationReference = BF570C0B590FF2E61401B78F /* Pods-WBHUDManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WBHUDManager/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,16 +639,12 @@
 		};
 		C5F8298521396828001C11BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E15C424E9B64178614175EDF /* Pods-WBHUDManagerTests.debug.xcconfig */;
+			baseConfigurationReference = 4C012C99C1D7FCD3C70668EC /* Pods-WBHUDManagerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WBHUDManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -664,16 +654,12 @@
 		};
 		C5F8298621396828001C11BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACE362673DAA21CBF9639C0C /* Pods-WBHUDManagerTests.release.xcconfig */;
+			baseConfigurationReference = CBC052555E7C39775E7C479C /* Pods-WBHUDManagerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WBHUDManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -683,15 +669,11 @@
 		};
 		C5F8298821396828001C11BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEAA2E4AA1244582DDBB704A /* Pods-WBHUDManagerUITests.debug.xcconfig */;
+			baseConfigurationReference = 85A8E0BC658B1DE019589F67 /* Pods-WBHUDManagerUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WBHUDManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -701,15 +683,11 @@
 		};
 		C5F8298921396828001C11BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E4822714EFAFED9A0502EEB /* Pods-WBHUDManagerUITests.release.xcconfig */;
+			baseConfigurationReference = 865B6FF821FCF4470091271D /* Pods-WBHUDManagerUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WBHUDManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

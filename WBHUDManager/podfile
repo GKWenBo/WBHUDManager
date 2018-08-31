@@ -6,6 +6,7 @@ target 'WBHUDManager' do
   use_frameworks!
   pod 'SVProgressHUD'
   pod 'MBProgressHUD'
+
   # Pods for WBHUDManager
 
   target 'WBHUDManagerTests' do

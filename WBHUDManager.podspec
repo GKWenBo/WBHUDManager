@@ -12,12 +12,12 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   
   s.subspec 'SVProgressHUDWBAddtional' do |ss|
-      ss.source_files = 'WBHUDManager/SVProgressHUDWBAddtional/**/*.{h,m}'
+      ss.source_files = 'WBHUDManager/SVProgressHUDWBAddtional/*.{h,m}'
       ss.dependency 'SVProgressHUD'
   end
   
   s.subspec 'MBProgressHUDWBAddtional' do |ss|
-      ss.source_files = 'WBHUDManager/MBProgressHUDWBAddtional/**/*.{h,m}'
+      ss.source_files = 'WBHUDManager/MBProgressHUDWBAddtional/*.{h,m}'
       ss.resource = 'WBHUDManager/MBProgressHUDWBAddtional/MBProgressHUD.bundle'
       ss.dependency 'MBProgressHUD'
   end

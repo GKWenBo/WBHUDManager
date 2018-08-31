@@ -7,3 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#if __has_include(<WBHUDManager.h>)
+
+#import <WBHUDManager/SVProgressHUD+WBAddtional.h>
+#import <WBHUDManager/MBProgressHUD+WBAddtional.h>
+
+#else
+
+#import "WBHUDManager/SVProgressHUD+WBAddtional.h"
+#import "WBHUDManager/MBProgressHUD+WBAddtional.h"
+
+#endif

@@ -1,0 +1,6 @@
+framework module Pods_WBHUDManagerTests {
+  umbrella header "Pods-WBHUDManagerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

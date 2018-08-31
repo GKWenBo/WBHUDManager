@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45886A8610E62FAF1D7B5015 /* Pods_WBHUDManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DF93BBBC0C3EDB73A3A71C /* Pods_WBHUDManagerUITests.framework */; };
+		8F8FD68F61BCE28464CC0E29 /* Pods_WBHUDManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8FC95E4B96008EAD13199 /* Pods_WBHUDManagerTests.framework */; };
+		C5F8297221396828001C11BC /* WBHUDManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8297121396828001C11BC /* WBHUDManagerTests.m */; };
+		C5F8297D21396828001C11BC /* WBHUDManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8297C21396828001C11BC /* WBHUDManagerUITests.m */; };
+		C5F829B12139734E001C11BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F829A62139734D001C11BC /* Assets.xcassets */; };
+		C5F829B22139734E001C11BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829A72139734D001C11BC /* AppDelegate.m */; };
+		C5F829B32139734E001C11BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829A82139734D001C11BC /* main.m */; };
+		C5F829B42139734E001C11BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829A92139734D001C11BC /* ViewController.m */; };
+		C5F829B52139734E001C11BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F829AC2139734E001C11BC /* LaunchScreen.storyboard */; };
+		C5F829B62139734E001C11BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F829AE2139734E001C11BC /* Main.storyboard */; };
+		C5F829B72139734E001C11BC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5F829B02139734E001C11BC /* Info.plist */; };
+		C5F829C221397378001C11BC /* SVProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829BA21397378001C11BC /* SVProgressHUD+WBAddtional.m */; };
+		C5F829C321397378001C11BC /* MBProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829BE21397378001C11BC /* MBProgressHUD+WBAddtional.m */; };
+		C5F829C421397378001C11BC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5F829C121397378001C11BC /* MBProgressHUD.bundle */; };
+		C5F82A2321398143001C11BC /* WBHUDManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C5F82A2221398143001C11BC /* WBHUDManager.podspec */; };
+		D5FA6743D33D854E28D46520 /* Pods_WBHUDManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79C4EA1EA1CE87E510516F6 /* Pods_WBHUDManager.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5F8296E21396828001C11BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5F8294D21396826001C11BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5F8295421396826001C11BC;
+			remoteInfo = WBHUDManager;
+		};
+		C5F8297921396828001C11BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5F8294D21396826001C11BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5F8295421396826001C11BC;
+			remoteInfo = WBHUDManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A777045C0632C25053DA6F3 /* Pods-WBHUDManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.debug.xcconfig"; sourceTree = "<group>"; };
+		0B283A87C24258695370F665 /* Pods-WBHUDManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.release.xcconfig"; sourceTree = "<group>"; };
+		0E4822714EFAFED9A0502EEB /* Pods-WBHUDManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerUITests/Pods-WBHUDManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		20DF93BBBC0C3EDB73A3A71C /* Pods_WBHUDManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE362673DAA21CBF9639C0C /* Pods-WBHUDManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerTests/Pods-WBHUDManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C5F8295521396826001C11BC /* WBHUDManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBHUDManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F8296D21396828001C11BC /* WBHUDManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBHUDManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F8297121396828001C11BC /* WBHUDManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHUDManagerTests.m; sourceTree = "<group>"; };
+		C5F8297321396828001C11BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5F8297821396828001C11BC /* WBHUDManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBHUDManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F8297C21396828001C11BC /* WBHUDManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHUDManagerUITests.m; sourceTree = "<group>"; };
+		C5F8297E21396828001C11BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5F829A52139734D001C11BC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = WBHUDManagerExample/ViewController.h; sourceTree = SOURCE_ROOT; };
+		C5F829A62139734D001C11BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WBHUDManagerExample/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C5F829A72139734D001C11BC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WBHUDManagerExample/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		C5F829A82139734D001C11BC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WBHUDManagerExample/main.m; sourceTree = SOURCE_ROOT; };
+		C5F829A92139734D001C11BC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = WBHUDManagerExample/ViewController.m; sourceTree = SOURCE_ROOT; };
+		C5F829AA2139734D001C11BC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WBHUDManagerExample/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		C5F829AD2139734E001C11BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5F829AF2139734E001C11BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		C5F829B02139734E001C11BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WBHUDManagerExample/Info.plist; sourceTree = SOURCE_ROOT; };
+		C5F829BA21397378001C11BC /* SVProgressHUD+WBAddtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+WBAddtional.m"; sourceTree = "<group>"; };
+		C5F829BB21397378001C11BC /* SVProgressHUD+WBAddtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+WBAddtional.h"; sourceTree = "<group>"; };
+		C5F829BC21397378001C11BC /* WBHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHUDManager.h; sourceTree = "<group>"; };
+		C5F829BE21397378001C11BC /* MBProgressHUD+WBAddtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+WBAddtional.m"; sourceTree = "<group>"; };
+		C5F829BF21397378001C11BC /* MBProgressHUD+WBHUDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBHUDExtension.h"; sourceTree = "<group>"; };
+		C5F829C021397378001C11BC /* MBProgressHUD+WBAddtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBAddtional.h"; sourceTree = "<group>"; };
+		C5F829C121397378001C11BC /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		C5F82A2221398143001C11BC /* WBHUDManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WBHUDManager.podspec; sourceTree = SOURCE_ROOT; };
+		C79C4EA1EA1CE87E510516F6 /* Pods_WBHUDManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E15C424E9B64178614175EDF /* Pods-WBHUDManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerTests/Pods-WBHUDManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F6D8FC95E4B96008EAD13199 /* Pods_WBHUDManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAA2E4AA1244582DDBB704A /* Pods-WBHUDManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerUITests/Pods-WBHUDManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5F8295221396826001C11BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5FA6743D33D854E28D46520 /* Pods_WBHUDManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F8296A21396828001C11BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8FD68F61BCE28464CC0E29 /* Pods_WBHUDManagerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F8297521396828001C11BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45886A8610E62FAF1D7B5015 /* Pods_WBHUDManagerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FA3D98E78727325E387FF9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A777045C0632C25053DA6F3 /* Pods-WBHUDManager.debug.xcconfig */,
+				0B283A87C24258695370F665 /* Pods-WBHUDManager.release.xcconfig */,
+				E15C424E9B64178614175EDF /* Pods-WBHUDManagerTests.debug.xcconfig */,
+				ACE362673DAA21CBF9639C0C /* Pods-WBHUDManagerTests.release.xcconfig */,
+				FEAA2E4AA1244582DDBB704A /* Pods-WBHUDManagerUITests.debug.xcconfig */,
+				0E4822714EFAFED9A0502EEB /* Pods-WBHUDManagerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5F8294C21396826001C11BC = {
+			isa = PBXGroup;
+			children = (
+				C5F8295721396826001C11BC /* WBHUDManager */,
+				C5F8297021396828001C11BC /* WBHUDManagerTests */,
+				C5F8297B21396828001C11BC /* WBHUDManagerUITests */,
+				C5F8295621396826001C11BC /* Products */,
+				0FA3D98E78727325E387FF9D /* Pods */,
+				DCDA6A223E05B4320385D3E8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C5F8295621396826001C11BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5F8295521396826001C11BC /* WBHUDManager.app */,
+				C5F8296D21396828001C11BC /* WBHUDManagerTests.xctest */,
+				C5F8297821396828001C11BC /* WBHUDManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5F8295721396826001C11BC /* WBHUDManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5F829B821397378001C11BC /* WBHUDManager */,
+				C5F829AA2139734D001C11BC /* AppDelegate.h */,
+				C5F829A72139734D001C11BC /* AppDelegate.m */,
+				C5F829A52139734D001C11BC /* ViewController.h */,
+				C5F829A92139734D001C11BC /* ViewController.m */,
+				C5F82A2221398143001C11BC /* WBHUDManager.podspec */,
+				C5F829AB2139734E001C11BC /* Base.lproj */,
+				C5F829B02139734E001C11BC /* Info.plist */,
+				C5F829A62139734D001C11BC /* Assets.xcassets */,
+				C5F829A82139734D001C11BC /* main.m */,
+			);
+			path = WBHUDManager;
+			sourceTree = "<group>";
+		};
+		C5F8297021396828001C11BC /* WBHUDManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5F8297121396828001C11BC /* WBHUDManagerTests.m */,
+				C5F8297321396828001C11BC /* Info.plist */,
+			);
+			path = WBHUDManagerTests;
+			sourceTree = "<group>";
+		};
+		C5F8297B21396828001C11BC /* WBHUDManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C5F8297C21396828001C11BC /* WBHUDManagerUITests.m */,
+				C5F8297E21396828001C11BC /* Info.plist */,
+			);
+			path = WBHUDManagerUITests;
+			sourceTree = "<group>";
+		};
+		C5F829AB2139734E001C11BC /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				C5F829AC2139734E001C11BC /* LaunchScreen.storyboard */,
+				C5F829AE2139734E001C11BC /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = WBHUDManagerExample/Base.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		C5F829B821397378001C11BC /* WBHUDManager */ = {
+			isa = PBXGroup;
+			children = (
+				C5F829B921397378001C11BC /* SVProgressHUDWBAddtional */,
+				C5F829BC21397378001C11BC /* WBHUDManager.h */,
+				C5F829BD21397378001C11BC /* MBProgressHUDWBAddtional */,
+			);
+			name = WBHUDManager;
+			sourceTree = "<group>";
+		};
+		C5F829B921397378001C11BC /* SVProgressHUDWBAddtional */ = {
+			isa = PBXGroup;
+			children = (
+				C5F829BB21397378001C11BC /* SVProgressHUD+WBAddtional.h */,
+				C5F829BA21397378001C11BC /* SVProgressHUD+WBAddtional.m */,
+			);
+			path = SVProgressHUDWBAddtional;
+			sourceTree = "<group>";
+		};
+		C5F829BD21397378001C11BC /* MBProgressHUDWBAddtional */ = {
+			isa = PBXGroup;
+			children = (
+				C5F829C021397378001C11BC /* MBProgressHUD+WBAddtional.h */,
+				C5F829BE21397378001C11BC /* MBProgressHUD+WBAddtional.m */,
+				C5F829BF21397378001C11BC /* MBProgressHUD+WBHUDExtension.h */,
+				C5F829C121397378001C11BC /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUDWBAddtional;
+			sourceTree = "<group>";
+		};
+		DCDA6A223E05B4320385D3E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C79C4EA1EA1CE87E510516F6 /* Pods_WBHUDManager.framework */,
+				F6D8FC95E4B96008EAD13199 /* Pods_WBHUDManagerTests.framework */,
+				20DF93BBBC0C3EDB73A3A71C /* Pods_WBHUDManagerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5F8295421396826001C11BC /* WBHUDManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5F8298121396828001C11BC /* Build configuration list for PBXNativeTarget "WBHUDManager" */;
+			buildPhases = (
+				DA5E835315FE5055F8FFE8BB /* [CP] Check Pods Manifest.lock */,
+				C5F8295121396826001C11BC /* Sources */,
+				C5F8295221396826001C11BC /* Frameworks */,
+				C5F8295321396826001C11BC /* Resources */,
+				AC3541B79A8C28779D73025C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WBHUDManager;
+			productName = WBHUDManager;
+			productReference = C5F8295521396826001C11BC /* WBHUDManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5F8296C21396828001C11BC /* WBHUDManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5F8298421396828001C11BC /* Build configuration list for PBXNativeTarget "WBHUDManagerTests" */;
+			buildPhases = (
+				04AE0D85CEEBC2CBF17A25F9 /* [CP] Check Pods Manifest.lock */,
+				C5F8296921396828001C11BC /* Sources */,
+				C5F8296A21396828001C11BC /* Frameworks */,
+				C5F8296B21396828001C11BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5F8296F21396828001C11BC /* PBXTargetDependency */,
+			);
+			name = WBHUDManagerTests;
+			productName = WBHUDManagerTests;
+			productReference = C5F8296D21396828001C11BC /* WBHUDManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C5F8297721396828001C11BC /* WBHUDManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5F8298721396828001C11BC /* Build configuration list for PBXNativeTarget "WBHUDManagerUITests" */;
+			buildPhases = (
+				75E9DD201BB5B55D2080EF6B /* [CP] Check Pods Manifest.lock */,
+				C5F8297421396828001C11BC /* Sources */,
+				C5F8297521396828001C11BC /* Frameworks */,
+				C5F8297621396828001C11BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5F8297A21396828001C11BC /* PBXTargetDependency */,
+			);
+			name = WBHUDManagerUITests;
+			productName = WBHUDManagerUITests;
+			productReference = C5F8297821396828001C11BC /* WBHUDManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5F8294D21396826001C11BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "文波";
+				TargetAttributes = {
+					C5F8295421396826001C11BC = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					C5F8296C21396828001C11BC = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C5F8295421396826001C11BC;
+					};
+					C5F8297721396828001C11BC = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C5F8295421396826001C11BC;
+					};
+				};
+			};
+			buildConfigurationList = C5F8295021396826001C11BC /* Build configuration list for PBXProject "WBHUDManager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5F8294C21396826001C11BC;
+			productRefGroup = C5F8295621396826001C11BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5F8295421396826001C11BC /* WBHUDManager */,
+				C5F8296C21396828001C11BC /* WBHUDManagerTests */,
+				C5F8297721396828001C11BC /* WBHUDManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5F8295321396826001C11BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F829B12139734E001C11BC /* Assets.xcassets in Resources */,
+				C5F829B62139734E001C11BC /* Main.storyboard in Resources */,
+				C5F829B52139734E001C11BC /* LaunchScreen.storyboard in Resources */,
+				C5F829B72139734E001C11BC /* Info.plist in Resources */,
+				C5F829C421397378001C11BC /* MBProgressHUD.bundle in Resources */,
+				C5F82A2321398143001C11BC /* WBHUDManager.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F8296B21396828001C11BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F8297621396828001C11BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04AE0D85CEEBC2CBF17A25F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WBHUDManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75E9DD201BB5B55D2080EF6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WBHUDManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC3541B79A8C28779D73025C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA5E835315FE5055F8FFE8BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WBHUDManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5F8295121396826001C11BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F829B42139734E001C11BC /* ViewController.m in Sources */,
+				C5F829C321397378001C11BC /* MBProgressHUD+WBAddtional.m in Sources */,
+				C5F829C221397378001C11BC /* SVProgressHUD+WBAddtional.m in Sources */,
+				C5F829B32139734E001C11BC /* main.m in Sources */,
+				C5F829B22139734E001C11BC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F8296921396828001C11BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F8297221396828001C11BC /* WBHUDManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5F8297421396828001C11BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F8297D21396828001C11BC /* WBHUDManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5F8296F21396828001C11BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5F8295421396826001C11BC /* WBHUDManager */;
+			targetProxy = C5F8296E21396828001C11BC /* PBXContainerItemProxy */;
+		};
+		C5F8297A21396828001C11BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5F8295421396826001C11BC /* WBHUDManager */;
+			targetProxy = C5F8297921396828001C11BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5F829AC2139734E001C11BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5F829AD2139734E001C11BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C5F829AE2139734E001C11BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5F829AF2139734E001C11BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5F8297F21396828001C11BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C5F8298021396828001C11BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5F8298221396828001C11BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A777045C0632C25053DA6F3 /* Pods-WBHUDManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBHUDManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5F8298321396828001C11BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B283A87C24258695370F665 /* Pods-WBHUDManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBHUDManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C5F8298521396828001C11BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E15C424E9B64178614175EDF /* Pods-WBHUDManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBHUDManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBHUDManager.app/WBHUDManager";
+			};
+			name = Debug;
+		};
+		C5F8298621396828001C11BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE362673DAA21CBF9639C0C /* Pods-WBHUDManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBHUDManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBHUDManager.app/WBHUDManager";
+			};
+			name = Release;
+		};
+		C5F8298821396828001C11BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEAA2E4AA1244582DDBB704A /* Pods-WBHUDManagerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBHUDManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBHUDManager;
+			};
+			name = Debug;
+		};
+		C5F8298921396828001C11BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4822714EFAFED9A0502EEB /* Pods-WBHUDManagerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WBHUDManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.WBHUDManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WBHUDManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5F8295021396826001C11BC /* Build configuration list for PBXProject "WBHUDManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5F8297F21396828001C11BC /* Debug */,
+				C5F8298021396828001C11BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5F8298121396828001C11BC /* Build configuration list for PBXNativeTarget "WBHUDManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5F8298221396828001C11BC /* Debug */,
+				C5F8298321396828001C11BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5F8298421396828001C11BC /* Build configuration list for PBXNativeTarget "WBHUDManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5F8298521396828001C11BC /* Debug */,
+				C5F8298621396828001C11BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5F8298721396828001C11BC /* Build configuration list for PBXNativeTarget "WBHUDManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5F8298821396828001C11BC /* Debug */,
+				C5F8298921396828001C11BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5F8294D21396826001C11BC /* Project object */;
+}

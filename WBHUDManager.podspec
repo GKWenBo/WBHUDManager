@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WBHUDManager'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'iOS 基于SVProgressHUD、MBProgressHUD提示框封装'
   s.homepage         = 'https://github.com/wenmobo/WBHUDManager'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

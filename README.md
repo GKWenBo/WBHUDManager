@@ -1,13 +1,16 @@
 # WBHUDManager
 
 ### 中文说明
+
 MBProgressHUD、SVProgressHUD提示框架实用封装。
 
 ### Requirements
-iOS 8+
-Xcode 8+
+
+- iOS 8+
+- Xcode 8+
 
 ### 安装
+
 ```
 target 'WBHUDManager' do
 
@@ -27,6 +30,7 @@ end
 ```
 
 ### Usage
+
 **MBProgressHUD**
 - 显示菊花
 ```
@@ -59,4 +63,5 @@ name：wenmbo
 email：wenmobo2018@gmail.com
 
 ### License
+
 WBHUDManager is available under the MIT license. See the LICENSE file for more info.

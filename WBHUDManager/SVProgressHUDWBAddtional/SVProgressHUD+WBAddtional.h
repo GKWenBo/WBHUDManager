@@ -30,7 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
                     completion:(SVProgressHUDDismissCompletion)completion;
 
 #pragma mark -- Delay Show
-#pragma mark
 + (void)wb_delayShowInfoWithStatus:(NSString *)status
                         completion:(SVProgressHUDDismissCompletion)completion;
 

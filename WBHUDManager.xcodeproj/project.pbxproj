@@ -22,6 +22,10 @@
 		C5F829C221397378001C11BC /* SVProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829BA21397378001C11BC /* SVProgressHUD+WBAddtional.m */; };
 		C5F829C321397378001C11BC /* MBProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829BE21397378001C11BC /* MBProgressHUD+WBAddtional.m */; };
 		C5F829C421397378001C11BC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5F829C121397378001C11BC /* MBProgressHUD.bundle */; };
+		C5F82A65213D8518001C11BC /* SVProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F82A63213D8518001C11BC /* SVProgressHUDViewController.m */; };
+		C5F82A66213D8518001C11BC /* SVProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F82A64213D8518001C11BC /* SVProgressHUDViewController.xib */; };
+		C5F82A6A213D880E001C11BC /* MBProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F82A68213D880E001C11BC /* MBProgressHUDViewController.m */; };
+		C5F82A6B213D880E001C11BC /* MBProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F82A69213D880E001C11BC /* MBProgressHUDViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,12 @@
 		C5F829BF21397378001C11BC /* MBProgressHUD+WBHUDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBHUDExtension.h"; sourceTree = "<group>"; };
 		C5F829C021397378001C11BC /* MBProgressHUD+WBAddtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBAddtional.h"; sourceTree = "<group>"; };
 		C5F829C121397378001C11BC /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		C5F82A62213D8518001C11BC /* SVProgressHUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SVProgressHUDViewController.h; path = WBHUDManagerExample/SVProgressHUDViewController.h; sourceTree = SOURCE_ROOT; };
+		C5F82A63213D8518001C11BC /* SVProgressHUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUDViewController.m; path = WBHUDManagerExample/SVProgressHUDViewController.m; sourceTree = SOURCE_ROOT; };
+		C5F82A64213D8518001C11BC /* SVProgressHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SVProgressHUDViewController.xib; path = WBHUDManagerExample/SVProgressHUDViewController.xib; sourceTree = SOURCE_ROOT; };
+		C5F82A67213D880E001C11BC /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MBProgressHUDViewController.h; path = WBHUDManagerExample/MBProgressHUDViewController.h; sourceTree = SOURCE_ROOT; };
+		C5F82A68213D880E001C11BC /* MBProgressHUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUDViewController.m; path = WBHUDManagerExample/MBProgressHUDViewController.m; sourceTree = SOURCE_ROOT; };
+		C5F82A69213D880E001C11BC /* MBProgressHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MBProgressHUDViewController.xib; path = WBHUDManagerExample/MBProgressHUDViewController.xib; sourceTree = SOURCE_ROOT; };
 		CBC052555E7C39775E7C479C /* Pods-WBHUDManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManagerTests/Pods-WBHUDManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB327049B7EBD4FFC26A08D7 /* Pods-WBHUDManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +154,12 @@
 				C5F829A72139734D001C11BC /* AppDelegate.m */,
 				C5F829A52139734D001C11BC /* ViewController.h */,
 				C5F829A92139734D001C11BC /* ViewController.m */,
+				C5F82A62213D8518001C11BC /* SVProgressHUDViewController.h */,
+				C5F82A63213D8518001C11BC /* SVProgressHUDViewController.m */,
+				C5F82A64213D8518001C11BC /* SVProgressHUDViewController.xib */,
+				C5F82A67213D880E001C11BC /* MBProgressHUDViewController.h */,
+				C5F82A68213D880E001C11BC /* MBProgressHUDViewController.m */,
+				C5F82A69213D880E001C11BC /* MBProgressHUDViewController.xib */,
 				C5F829AB2139734E001C11BC /* Base.lproj */,
 				C5F829B02139734E001C11BC /* Info.plist */,
 				C5F829A62139734D001C11BC /* Assets.xcassets */,
@@ -331,9 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F829B12139734E001C11BC /* Assets.xcassets in Resources */,
+				C5F82A6B213D880E001C11BC /* MBProgressHUDViewController.xib in Resources */,
 				C5F829B62139734E001C11BC /* Main.storyboard in Resources */,
 				C5F829B52139734E001C11BC /* LaunchScreen.storyboard in Resources */,
 				C5F829B72139734E001C11BC /* Info.plist in Resources */,
+				C5F82A66213D8518001C11BC /* SVProgressHUDViewController.xib in Resources */,
 				C5F829C421397378001C11BC /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,11 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F82A65213D8518001C11BC /* SVProgressHUDViewController.m in Sources */,
 				C5F829B42139734E001C11BC /* ViewController.m in Sources */,
 				C5F829C321397378001C11BC /* MBProgressHUD+WBAddtional.m in Sources */,
 				C5F829C221397378001C11BC /* SVProgressHUD+WBAddtional.m in Sources */,
 				C5F829B32139734E001C11BC /* main.m in Sources */,
 				C5F829B22139734E001C11BC /* AppDelegate.m in Sources */,
+				C5F82A6A213D880E001C11BC /* MBProgressHUDViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WBHUDManager/Info.plist;
+				INFOPLIST_FILE = /Users/wenmobo/Desktop/GitHub/WBHUDManager/WBHUDManagerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,7 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WBHUDManager/Info.plist;
+				INFOPLIST_FILE = /Users/wenmobo/Desktop/GitHub/WBHUDManager/WBHUDManagerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -645,7 +665,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WBHUDManagerTests/Info.plist;
+				INFOPLIST_FILE = /Users/wenmobo/Desktop/GitHub/WBHUDManager/WBHUDManagerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,7 +684,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WBHUDManagerTests/Info.plist;
+				INFOPLIST_FILE = /Users/wenmobo/Desktop/GitHub/WBHUDManager/WBHUDManagerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

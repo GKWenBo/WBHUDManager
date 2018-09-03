@@ -46,14 +46,13 @@ NSTimeInterval const kDelayShowTimeInterval = 1.f;
 
 + (void)wb_showTextWithStatus:(NSString *)status
                    completion:(SVProgressHUDDismissCompletion)completion {
-    [self showImage:[UIImage new] status:status];
+    [self showImage:[UIImage imageNamed:@""] status:status];
     [self setDefaultStyle:SVProgressHUDStyleDark];
     [self setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [self dismissWithDelay:kMinimumDismissTimeInterval completion:completion];
 }
 
 #pragma mark -- Delay Show
-#pragma mark
 + (void)wb_delayShowInfoWithStatus:(NSString *)status
                         completion:(SVProgressHUDDismissCompletion)completion {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kDelayShowTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

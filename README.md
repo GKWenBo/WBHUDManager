@@ -64,7 +64,7 @@ end
 
 ### Author
 
-author：wenmbo   
+author：wenbo   
 email：wenmobo2018@gmail.com
 
 ### License

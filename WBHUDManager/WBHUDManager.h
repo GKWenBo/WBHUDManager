@@ -15,7 +15,7 @@
 
 #else
 
-#import "WBHUDManager/SVProgressHUD+WBAddtional.h"
-#import "WBHUDManager/MBProgressHUD+WBAddtional.h"
+#import "SVProgressHUD+WBAddtional.h"
+#import "MBProgressHUD+WBAddtional.h"
 
 #endif

@@ -7,7 +7,7 @@
 //
 
 #import "SVProgressHUDViewController.h"
-#import "SVProgressHUD+WBAddtional.h"
+#import "WBSVProgressHUDManager.h"
 
 @interface SVProgressHUDViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -16,6 +16,10 @@
 @end
 
 @implementation SVProgressHUDViewController
+
+- (void)dealloc {
+    NSLog(@"销毁了");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,26 +47,32 @@
     switch (indexPath.row) {
         case 0:
         {
-            [SVProgressHUD wb_showSuccessWithStatus:@"登录成功！"
-                                         completion:^{
+            WB_SVProgressHUDManager
+            .wb_showSuccessWithStatus(@"登录成功！")
+            .wb_dismissWithDelay(2, ^{
                 NSLog(@"完成回调");
-            }];
+            })
+            .wb_setDefaultMaskType(SVProgressHUDMaskTypeBlack);
+    
         }
             break;
         case 1:
         {
-            [SVProgressHUD wb_showErrorWithStatus:@"失败提示"
-                                       completion:^{
-                                           NSLog(@"完成回调");
-                                       }];
+            WB_SVProgressHUDManager
+            .wb_showErrorWithStatus(@"失败提示")
+            .wb_dismissWithDelay(2, ^{
+                NSLog(@"完成回调");
+            });
         }
             break;
         case 2:
         {
-            [SVProgressHUD wb_showTextWithStatus:@"信息提示"
-                                      completion:^{
-                                          NSLog(@"完成回调");
-                                      }];
+            WB_SVProgressHUDManager
+            .wb_showTextWithStatus(@"信息提示")
+            .wb_setDefaultStyle(SVProgressHUDStyleDark)
+            .wb_dismissWithDelay(2, ^{
+                NSLog(@"完成回调");
+            });
         }
             break;
         default:

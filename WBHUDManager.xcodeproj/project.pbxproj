@@ -10,6 +10,7 @@
 		0113ECC36CAAE55A28D0C181 /* Pods_WBHUDManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0F50059B784A93305586E0 /* Pods_WBHUDManager.framework */; };
 		464564936F71243C437EDBBB /* Pods_WBHUDManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC39F0D2FBD7E42FAE58A3E /* Pods_WBHUDManagerUITests.framework */; };
 		B8E8A68D91E91184F34F096B /* Pods_WBHUDManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B936A57BD02B190A0A6E76EB /* Pods_WBHUDManagerTests.framework */; };
+		C5E16E5F239CE3FC005904C5 /* WBSVProgressHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E16E5D239CE3FC005904C5 /* WBSVProgressHUDManager.m */; };
 		C5F8297221396828001C11BC /* WBHUDManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8297121396828001C11BC /* WBHUDManagerTests.m */; };
 		C5F8297D21396828001C11BC /* WBHUDManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F8297C21396828001C11BC /* WBHUDManagerUITests.m */; };
 		C5F829B12139734E001C11BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F829A62139734D001C11BC /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		C5F829B52139734E001C11BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F829AC2139734E001C11BC /* LaunchScreen.storyboard */; };
 		C5F829B62139734E001C11BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F829AE2139734E001C11BC /* Main.storyboard */; };
 		C5F829B72139734E001C11BC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5F829B02139734E001C11BC /* Info.plist */; };
-		C5F829C221397378001C11BC /* SVProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829BA21397378001C11BC /* SVProgressHUD+WBAddtional.m */; };
 		C5F829C321397378001C11BC /* MBProgressHUD+WBAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F829BE21397378001C11BC /* MBProgressHUD+WBAddtional.m */; };
 		C5F829C421397378001C11BC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5F829C121397378001C11BC /* MBProgressHUD.bundle */; };
 		C5F82A65213D8518001C11BC /* SVProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F82A63213D8518001C11BC /* SVProgressHUDViewController.m */; };
@@ -53,6 +53,8 @@
 		B936A57BD02B190A0A6E76EB /* Pods_WBHUDManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0F50059B784A93305586E0 /* Pods_WBHUDManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBHUDManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF570C0B590FF2E61401B78F /* Pods-WBHUDManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBHUDManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBHUDManager/Pods-WBHUDManager.release.xcconfig"; sourceTree = "<group>"; };
+		C5E16E5D239CE3FC005904C5 /* WBSVProgressHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSVProgressHUDManager.m; sourceTree = "<group>"; };
+		C5E16E5E239CE3FC005904C5 /* WBSVProgressHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSVProgressHUDManager.h; sourceTree = "<group>"; };
 		C5F8295521396826001C11BC /* WBHUDManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBHUDManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F8296D21396828001C11BC /* WBHUDManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBHUDManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F8297121396828001C11BC /* WBHUDManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBHUDManagerTests.m; sourceTree = "<group>"; };
@@ -69,8 +71,6 @@
 		C5F829AD2139734E001C11BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5F829AF2139734E001C11BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		C5F829B02139734E001C11BC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WBHUDManagerExample/Info.plist; sourceTree = SOURCE_ROOT; };
-		C5F829BA21397378001C11BC /* SVProgressHUD+WBAddtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+WBAddtional.m"; sourceTree = "<group>"; };
-		C5F829BB21397378001C11BC /* SVProgressHUD+WBAddtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+WBAddtional.h"; sourceTree = "<group>"; };
 		C5F829BC21397378001C11BC /* WBHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHUDManager.h; sourceTree = "<group>"; };
 		C5F829BE21397378001C11BC /* MBProgressHUD+WBAddtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+WBAddtional.m"; sourceTree = "<group>"; };
 		C5F829BF21397378001C11BC /* MBProgressHUD+WBHUDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+WBHUDExtension.h"; sourceTree = "<group>"; };
@@ -122,6 +122,15 @@
 				4BC39F0D2FBD7E42FAE58A3E /* Pods_WBHUDManagerUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5E16E59239CC935005904C5 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C5E16E5E239CE3FC005904C5 /* WBSVProgressHUDManager.h */,
+				C5E16E5D239CE3FC005904C5 /* WBSVProgressHUDManager.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		C5F8294C21396826001C11BC = {
@@ -199,20 +208,11 @@
 		C5F829B821397378001C11BC /* WBHUDManager */ = {
 			isa = PBXGroup;
 			children = (
-				C5F829B921397378001C11BC /* SVProgressHUDWBAddtional */,
+				C5E16E59239CC935005904C5 /* SVProgressHUD */,
 				C5F829BC21397378001C11BC /* WBHUDManager.h */,
 				C5F829BD21397378001C11BC /* MBProgressHUDWBAddtional */,
 			);
 			name = WBHUDManager;
-			sourceTree = "<group>";
-		};
-		C5F829B921397378001C11BC /* SVProgressHUDWBAddtional */ = {
-			isa = PBXGroup;
-			children = (
-				C5F829BB21397378001C11BC /* SVProgressHUD+WBAddtional.h */,
-				C5F829BA21397378001C11BC /* SVProgressHUD+WBAddtional.m */,
-			);
-			path = SVProgressHUDWBAddtional;
 			sourceTree = "<group>";
 		};
 		C5F829BD21397378001C11BC /* MBProgressHUDWBAddtional */ = {
@@ -454,10 +454,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E16E5F239CE3FC005904C5 /* WBSVProgressHUDManager.m in Sources */,
 				C5F82A65213D8518001C11BC /* SVProgressHUDViewController.m in Sources */,
 				C5F829B42139734E001C11BC /* ViewController.m in Sources */,
 				C5F829C321397378001C11BC /* MBProgressHUD+WBAddtional.m in Sources */,
-				C5F829C221397378001C11BC /* SVProgressHUD+WBAddtional.m in Sources */,
 				C5F829B32139734E001C11BC /* main.m in Sources */,
 				C5F829B22139734E001C11BC /* AppDelegate.m in Sources */,
 				C5F82A6A213D880E001C11BC /* MBProgressHUDViewController.m in Sources */,

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WBHUDManager'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'iOS 基于SVProgressHUD、MBProgressHUD提示框封装'
   s.homepage         = 'https://github.com/wenmobo/WBHUDManager'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.source_files =  'WBHUDManager/WBHUDManager.h'
   s.frameworks = 'UIKit'
   
-  s.subspec 'SVProgressHUDWBAddtional' do |ss|
-      ss.source_files = 'WBHUDManager/SVProgressHUDWBAddtional/*.{h,m}'
+  s.subspec 'SVProgressHUD' do |ss|
+      ss.source_files = 'WBHUDManager/SVProgressHUD/*.{h,m}'
       ss.dependency 'SVProgressHUD'
   end
   

@@ -52,15 +52,22 @@ end
 ```
 
 **SVProgressHUD**
+
 - 文字提示
 ```
 //文字提示
-[SVProgressHUD wb_showTextWithStatus:@"信息提示"
-                          completion:^{
+WB_SVProgressHUDManager
+.wb_showTextWithStatus(@"信息提示")
+.wb_setDefaultStyle(SVProgressHUDStyleDark)
+.wb_dismissWithDelay(2, ^{
     NSLog(@"完成回调");
-}];
+});
 ```
 更多用法，请看下载demo查看。
+
+### 更新日志
+
+- 2019-12-08(1.0.2)：SVProgressHUD改为链式调用
 
 ### Author
 
